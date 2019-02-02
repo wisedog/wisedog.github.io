@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>태그: 엄격 모드 - Jongha Kim&#39;s Dev story</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Jongha Kim&#39;s Dev story">
+<meta property="og:url" content="http://dev.wisedog.net/tags/엄격-모드/index.html">
+<meta property="og:site_name" content="Jongha Kim&#39;s Dev story">
+<meta property="og:locale" content="ko">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jongha Kim&#39;s Dev story">
+
+
+
+<link rel="alternative" href="/atom.xml" title="Jongha Kim&#39;s Dev story" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116574812-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116574812-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/mylogo.png" alt="Jongha Kim&#39;s Dev story" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">태그</a></li>
+            <li class="is-active"><a href="#" aria-current="page">엄격 모드</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-24T12:08:19.000Z">2018-05-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/programming/">programming</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 read (About 752 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/05/24/ECMAScript-use-strict-사용하기/">ECMAScript use strict 사용하기</a>
+            
+        </h1>
+        <div class="content">
+            <p>&#x201C;use strict&#x201D; &#xC740; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xCF54;&#xB4DC;&#xB97C; &#xC880; &#xB354; <strong>&#xC5C4;&#xACA9;&#xD55C;(strict) &#xBAA8;&#xB4DC;</strong>&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xD558;&#xB3C4;&#xB85D; &#xC778;&#xD130;&#xD504;&#xB9AC;&#xD130;&#xC5D0;&#xAC8C; &#xBA85;&#xB839;&#xD558;&#xB294; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC758; &#xC9C0;&#xC2DC;&#xC790;(directive)&#xB2E4;. </p>
+<h3 id="&#xC88B;&#xC740;-&#xC810;-3&#xAC00;&#xC9C0;"><a href="#&#xC88B;&#xC740;-&#xC810;-3&#xAC00;&#xC9C0;" class="headerlink" title="&#xC88B;&#xC740; &#xC810; 3&#xAC00;&#xC9C0;"></a>&#xC88B;&#xC740; &#xC810; 3&#xAC00;&#xC9C0;</h3><ol>
+<li>&#xCF54;&#xB529; &#xC2E4;&#xC218; &#xB300;&#xC2E0; &#xC5D0;&#xB7EC;&#xB97C; &#xB0B8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBA38;&#xB294; &#xC790;&#xC2E0;&#xC758; &#xC2E4;&#xC218;&#xB97C; &#xC27D;&#xAC8C; &#xC54C;&#xC544;&#xCC28;&#xB9B4; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>&#xBCF4;&#xD1B5; &#xC5C4;&#xACA9; &#xBAA8;&#xB4DC;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xC18D;&#xB3C4;&#xAC00; &#xBE60;&#xB974;&#xB2E4;&#xB77C;&#xACE0; &#xC54C;&#xB824;&#xC838; &#xC788;&#xB2E4;. &#xC9C1;&#xC811; &#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xC548;&#xD574;&#xBD10;&#xC11C; &#xC54C; &#xC218;&#xB294; &#xC5C6;&#xC9C0;&#xB9CC;, &#xC5C4;&#xACA9; &#xBAA8;&#xB4DC;&#xC5D0;&#xC11C;&#xB294; &#xC778;&#xD130;&#xD504;&#xB9AC;&#xD130;&#xC758; &#xCD5C;&#xC801;&#xD654; &#xC791;&#xC5C5;&#xC744; &#xC5B4;&#xB835;&#xAC8C; &#xB9CC;&#xB4DC;&#xB294; &#xBB38;&#xBC95;&#xC744; &#xAE08;&#xC9C0;&#xC2DC;&#xD0A4;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBE60;&#xB974;&#xB2E4;.</li>
+<li>ECMAScript&#xC758; &#xCC28;&#xAE30; &#xBC84;&#xC804;&#xB4E4;&#xC5D0;&#xC11C; &#xC815;&#xC758; &#xB420; &#xBB38;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xBABB;&#xD55C;&#xB2E4;.</li>
+</ol>
+<h3 id="&#x2018;&#xC5C4;&#xACA9;-&#xBAA8;&#xB4DC;&#x2019;&#xB97C;-&#xC0AC;&#xC6A9;&#xD558;&#xBA74;-&#xC0DD;&#xAE30;&#xB294;-&#xC81C;&#xD55C;"><a href="#&#x2018;&#xC5C4;&#xACA9;-&#xBAA8;&#xB4DC;&#x2019;&#xB97C;-&#xC0AC;&#xC6A9;&#xD558;&#xBA74;-&#xC0DD;&#xAE30;&#xB294;-&#xC81C;&#xD55C;" class="headerlink" title="&#x2018;&#xC5C4;&#xACA9; &#xBAA8;&#xB4DC;&#x2019;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC0DD;&#xAE30;&#xB294; &#xC81C;&#xD55C;"></a>&#x2018;&#xC5C4;&#xACA9; &#xBAA8;&#xB4DC;&#x2019;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC0DD;&#xAE30;&#xB294; &#xC81C;&#xD55C;</h3><p>&#xC774; &#x2018;&#xC5C4;&#xACA9; &#xBAA8;&#xB4DC;&#x2019;&#xB85C; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xCF54;&#xB4DC;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xACE0;&#xC790; &#xD558;&#xBA74; &#xC740;&#xC740;&#xD558;&#xAC8C; &#xB9CE;&#xC740; &#xC81C;&#xD55C;&#xC774; &#xC0DD;&#xAE34;&#xB2E4;. &#xC8FC;&#xC11D;&#xC740; &#xD06C;&#xB86C; &#xCF58;&#xC194;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xD588;&#xC744; &#xB54C; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xC5D0;&#xB7EC;&#xB2E4;.</p>
+<ol>
+<li><p>&#xC0DD;&#xC131;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xB2E4;. &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C;&#xB294; &#xC2E4;&#xC218;&#xB85C; &#xBCC0;&#xC218;&#xBA85;&#xC744; &#xC798;&#xBABB; &#xC801;&#xC5C8;&#xB2E4;&#xBA74; &#xC5D0;&#xB7EC;&#xB97C; &#xB0B4;&#xC9C0; &#xC54A;&#xACE0; &#xADF8;&#xB0E5; &#xC0C8;&#xB85C;&#xC6B4; &#xC804;&#xC5ED; &#xBCC0;&#xC218;&#xAC00; &#xC0DD;&#xC131;&#xB418;&#xB294;&#xB370;, strict &#xBAA8;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC774;&#xB97C; &#xB9C9;&#xC744; &#xC218; &#xC788;&#xB2E4;.</p>
+<figure class="highlight javascript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&quot;use strict&quot;</span>;</span><br><span class="line">pi = <span class="hljs-number">3.1415</span>;    <span class="hljs-comment">// Uncaught ReferenceError: pi is not defined</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>&#xBCC0;&#xC218;&#xB098; &#xD568;&#xC218;, &#xC0AD;&#xC81C;&#xD560; &#xC218; &#xC5C6;&#xB294; &#xC18D;&#xC131;&#xC744; &#xC0AD;&#xC81C;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</p>
+<figure class="highlight javascript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> pi = <span class="hljs-number">3.14</span>;</span><br><span class="line"><span class="hljs-keyword">delete</span> pi;   </span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">p1, p2</span>) </span>{};</span><br><span class="line"><span class="hljs-keyword">delete</span> f;   <span class="hljs-comment">// Uncaught SyntaxError: Delete of an unqualified identifier in strict mode.</span></span><br><span class="line"><span class="hljs-keyword">delete</span> <span class="hljs-built_in">Object</span>.prototype; <span class="hljs-comment">// TypeError: property &quot;prototype&quot; is non-configurable and can&apos;t be deleted</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>&#xD30C;&#xB77C;&#xBBF8;&#xD130; &#xC774;&#xB984;&#xC744; &#xC911;&#xBCF5;&#xC73C;&#xB85C; &#xC4F8; &#xC218; &#xC5C6;&#xB2E4;.</p>
+<figure class="highlight javascript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">p1, p1</span>) </span>{};   <span class="hljs-comment">// SyntaxError: duplicate formal argument p1</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>8&#xC9C4;&#xC218; &#xB9AC;&#xD130;&#xB7F4;, 8&#xC9C4;&#xC218; &#xC774;&#xC2A4;&#xCF00;&#xC774;&#xD504; &#xBB38;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</p>
+<figure class="highlight javascript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> oct = <span class="hljs-number">010</span>;  <span class="hljs-comment">// Uncaught SyntaxError: Octal literals are not allowed in strict mode</span></span><br><span class="line"><span class="hljs-keyword">var</span> oct1 = <span class="hljs-string">&quot;\010&quot;</span>;  <span class="hljs-comment">// Uncaught SyntaxError: Octal escape sequences are not allowed in strict mode.</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>&#xC77D;&#xAE30; &#xC804;&#xC6A9; &#xC18D;&#xC131;&#xC774;&#xB098; GET &#xC804;&#xC6A9; &#xC18D;&#xC131;&#xC744; &#xB2E4;&#xC2DC; &#xC4F8; &#xC218; &#xC5C6;&#xB2E4;.</p>
+<figure class="highlight javascript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> obj = {<span class="hljs-keyword">get</span> z() {<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>} };</span><br><span class="line"><span class="hljs-built_in">Object</span>.defineProperty(obj, <span class="hljs-string">&quot;x1&quot;</span>, {<span class="hljs-attr">value</span>:<span class="hljs-number">123</span>, <span class="hljs-attr">writable</span>:<span class="hljs-literal">false</span>});</span><br><span class="line"></span><br><span class="line">obj.x1 = <span class="hljs-string">&quot;hello&quot;</span>;  <span class="hljs-comment">// Uncaught TypeError: Cannot assign to read only property &apos;x1&apos; of object</span></span><br><span class="line">obj.z = <span class="hljs-string">&quot;world&quot;</span>;  <span class="hljs-comment">// Uncaught TypeError: Cannot set property z of #&lt;Object&gt; which has only a getter</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>&#xBA87; &#xAC00;&#xC9C0; &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xBCC0;&#xC218;&#xBA85;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</p>
+<figure class="highlight javascript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> <span class="hljs-built_in">eval</span> = <span class="hljs-string">&apos;hello&apos;</span>; <span class="hljs-comment">// SyntaxError: &apos;eval&apos; can&apos;t be defined or assigned to in strict mode code</span></span><br><span class="line"><span class="hljs-keyword">var</span> <span class="hljs-built_in">arguments</span> = <span class="hljs-string">&apos;world&apos;</span>;    <span class="hljs-comment">// SyntaxError: &apos;arguments&apos; can&apos;t be defined or assigned to in strict mode code</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ol>
+<h3 id="&#xBE0C;&#xB77C;&#xC6B0;&#xC800;-&#xC9C0;&#xC6D0;"><a href="#&#xBE0C;&#xB77C;&#xC6B0;&#xC800;-&#xC9C0;&#xC6D0;" class="headerlink" title="&#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xC9C0;&#xC6D0;"></a>&#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xC9C0;&#xC6D0;</h3><p>2009&#xB144; ECMAScript 5&#xC5D0;&#xC11C; &#xCC98;&#xC74C; &#xB098;&#xC628; &#xAE30;&#xB2A5;&#xC73C;&#xB85C; IE9&#xACFC; &#xADF8; &#xC774;&#xC804; IE&#xC5D0;&#xC11C;&#xB294; strict &#xBAA8;&#xB4DC;&#xB97C; &#xC9C0;&#xC6D0;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;. &#xB2E4;&#xB9CC; &#xC774;&#xC804; &#xBE0C;&#xB77C;&#xC6B0;&#xC838;&#xC5D0;&#xC11C; &#xD070; &#xBB38;&#xC81C;&#xB294; &#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB370;, &#xC774;&#xC804; &#xBE0C;&#xB77C;&#xC6B0;&#xC838;&#xC5D0;&#xC11C;&#xB294; &#xBB38;&#xBC95;&#xC801;(BNF)&#xC73C;&#xB85C; &#xBCF4;&#xBA74; &#x201C;use strict&#x201D;&#xB97C; &#xADF8;&#xC800; &#xB9AC;&#xD130;&#xB7F4; &#xD45C;&#xD604;&#xC73C;&#xB85C; &#xC778;&#xC2DD;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; side effect &#xB97C; &#xBC1C;&#xC0DD;&#xC2DC;&#xD0A4;&#xC9C0; &#xC54A;&#xACE0; &#xB530;&#xB77C;&#xC11C; &#xADF8;&#xB0E5; &#xBB34;&#xC2DC;&#xB420; &#xBFD0;&#xC774;&#xB2E4;.</p>
+<p>strict &#xBAA8;&#xB4DC;&#xB97C; &#xC9C0;&#xC6D0;&#xD558;&#xB294; &#xBE0C;&#xB77C;&#xC6B0;&#xC838;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<ul>
+<li>&#xD06C;&#xB86C; &#xBC84;&#xC804; 10 &#xC774;&#xC0C1;</li>
+<li>&#xD30C;&#xC774;&#xC5B4;&#xD3ED;&#xC2A4; &#xBC84;&#xC804; 4 &#xC774;&#xC0C1;</li>
+<li>&#xC0AC;&#xD30C;&#xB9AC; &#xBC84;&#xC804; 5.1 &#xC774;&#xC0C1;</li>
+<li>IE &#xBC84;&#xC804; 10 &#xC774;&#xC0C1;</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/profile_small.jpg" alt="Jongha Kim">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Jongha Kim
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Software Developer/ Author
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Republic of Korea</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        7
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        6
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        24
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="/">
+                팔로우</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/wisedog">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/jongha_the_dev">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/cloud/">
+            <span class="level-start">
+                <span class="level-item">cloud</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/cloud/GCP/">
+            <span class="level-start">
+                <span class="level-item">GCP</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/programming/">
+            <span class="level-start">
+                <span class="level-item">programming</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/programming/golang/">
+            <span class="level-start">
+                <span class="level-item">golang</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/programming/javascript/">
+            <span class="level-start">
+                <span class="level-item">javascript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/programming/node/">
+            <span class="level-start">
+                <span class="level-item">node</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2018/12/29/google-app-engine-python3-pros-cons/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="구글 앱 엔진 파이썬3 변경사항">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-29T11:43:56.000Z">2018-12-29</time></div>
+                    <a href="/2018/12/29/google-app-engine-python3-pros-cons/" class="has-link-black-ter is-size-6">구글 앱 엔진 파이썬3 변경사항</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/15/Google-AppEngine-news-2018-half-later/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="구글 앱 엔진 2018 하반기 소식 모음">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-15T01:43:56.000Z">2018-12-15</time></div>
+                    <a href="/2018/12/15/Google-AppEngine-news-2018-half-later/" class="has-link-black-ter is-size-6">구글 앱 엔진 2018 하반기 소식 모음</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/05/24/ECMAScript-use-strict-사용하기/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ECMAScript use strict 사용하기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-05-24T12:08:19.000Z">2018-05-24</time></div>
+                    <a href="/2018/05/24/ECMAScript-use-strict-사용하기/" class="has-link-black-ter is-size-6">ECMAScript use strict 사용하기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/programming/">programming</a> / <a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/05/19/About-ECMAScript-Hoisting/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ECMAScript(Javascript) 호이스팅">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-05-19T09:03:26.000Z">2018-05-19</time></div>
+                    <a href="/2018/05/19/About-ECMAScript-Hoisting/" class="has-link-black-ter is-size-6">ECMAScript(Javascript) 호이스팅</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/programming/">programming</a> / <a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/04/22/introduce-google-cloud-app-engine-1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="구글 앱 엔진 소개">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-04-22T05:47:00.000Z">2018-04-22</time></div>
+                    <a href="/2018/04/22/introduce-google-cloud-app-engine-1/" class="has-link-black-ter is-size-6">구글 앱 엔진 소개</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/cloud/">cloud</a> / <a class="has-link-grey -link" href="/categories/cloud/GCP/">GCP</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/App-Engine/" style="font-size: 16.67px;">App Engine</a> <a href="/tags/ECMAScript/" style="font-size: 13.33px;">ECMAScript</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 10px;">Google Cloud Platform</a> <a href="/tags/Hoisting/" style="font-size: 10px;">Hoisting</a> <a href="/tags/Javascript/" style="font-size: 13.33px;">Javascript</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/Unit-test/" style="font-size: 10px;">Unit test</a> <a href="/tags/appengine/" style="font-size: 10px;">appengine</a> <a href="/tags/datastore/" style="font-size: 10px;">datastore</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/google-cloud-platform/" style="font-size: 16.67px;">google cloud platform</a> <a href="/tags/jest/" style="font-size: 10px;">jest</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/구글-앱-엔진/" style="font-size: 16.67px;">구글 앱 엔진</a> <a href="/tags/구글-클라우드-플랫폼/" style="font-size: 16.67px;">구글 클라우드 플랫폼</a> <a href="/tags/삽질/" style="font-size: 10px;">삽질</a> <a href="/tags/앱엔진/" style="font-size: 16.67px;">앱엔진</a> <a href="/tags/엄격-모드/" style="font-size: 10px;">엄격 모드</a> <a href="/tags/유닛-테스트/" style="font-size: 10px;">유닛 테스트</a> <a href="/tags/자바스트립트/" style="font-size: 13.33px;">자바스트립트</a> <a href="/tags/호이스팅/" style="font-size: 10px;">호이스팅</a>
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/mylogo.png" alt="Jongha Kim&#39;s Dev story" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Jongha Kim&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: 'Pages',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
