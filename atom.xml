@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dev.wisedog.net/"/>
-  <updated>2019-02-02T02:36:31.789Z</updated>
+  <updated>2019-02-05T14:04:53.741Z</updated>
   <id>http://dev.wisedog.net/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue 패키지 개발하기</title>
+    <link href="http://dev.wisedog.net/2019/02/04/publish-vue-package/"/>
+    <id>http://dev.wisedog.net/2019/02/04/publish-vue-package/</id>
+    <published>2019-02-04T05:12:29.000Z</published>
+    <updated>2019-02-05T14:04:53.741Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#xC791;&amp;#xB144; &amp;#xB9D0;&amp;#xBD80;&amp;#xD130; &amp;#xD558;&amp;#xACE0; &amp;#xC2F6;&amp;#xC5C8;&amp;#xC9C0;&amp;#xB9CC; &amp;#xC2DC;&amp;#xAC04;&amp;#xC774;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="http://dev.wisedog.net/tags/vue/"/>
+    
+      <category term="vue.js" scheme="http://dev.wisedog.net/tags/vue-js/"/>
+    
+      <category term="npm" scheme="http://dev.wisedog.net/tags/npm/"/>
+    
+      <category term="npm 패키지" scheme="http://dev.wisedog.net/tags/npm-%ED%8C%A8%ED%82%A4%EC%A7%80/"/>
+    
+      <category term="npm 퍼블리싱" scheme="http://dev.wisedog.net/tags/npm-%ED%8D%BC%EB%B8%94%EB%A6%AC%EC%8B%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>구글 앱 엔진 파이썬3 변경사항</title>
@@ -36,9 +68,9 @@
     </summary>
     
     
-      <category term="google cloud platform" scheme="http://dev.wisedog.net/tags/google-cloud-platform/"/>
-    
       <category term="GCP" scheme="http://dev.wisedog.net/tags/GCP/"/>
+    
+      <category term="google cloud platform" scheme="http://dev.wisedog.net/tags/google-cloud-platform/"/>
     
       <category term="App Engine" scheme="http://dev.wisedog.net/tags/App-Engine/"/>
     
@@ -70,9 +102,9 @@
     </summary>
     
     
-      <category term="google cloud platform" scheme="http://dev.wisedog.net/tags/google-cloud-platform/"/>
-    
       <category term="GCP" scheme="http://dev.wisedog.net/tags/GCP/"/>
+    
+      <category term="google cloud platform" scheme="http://dev.wisedog.net/tags/google-cloud-platform/"/>
     
       <category term="App Engine" scheme="http://dev.wisedog.net/tags/App-Engine/"/>
     
@@ -180,9 +212,9 @@
       <category term="GCP" scheme="http://dev.wisedog.net/categories/cloud/GCP/"/>
     
     
-      <category term="google cloud platform" scheme="http://dev.wisedog.net/tags/google-cloud-platform/"/>
-    
       <category term="GCP" scheme="http://dev.wisedog.net/tags/GCP/"/>
+    
+      <category term="google cloud platform" scheme="http://dev.wisedog.net/tags/google-cloud-platform/"/>
     
       <category term="App Engine" scheme="http://dev.wisedog.net/tags/App-Engine/"/>
     
@@ -254,9 +286,9 @@
       <category term="golang" scheme="http://dev.wisedog.net/categories/programming/golang/"/>
     
     
-      <category term="GCP" scheme="http://dev.wisedog.net/tags/GCP/"/>
-    
       <category term="Google Cloud Platform" scheme="http://dev.wisedog.net/tags/Google-Cloud-Platform/"/>
+    
+      <category term="GCP" scheme="http://dev.wisedog.net/tags/GCP/"/>
     
       <category term="golang" scheme="http://dev.wisedog.net/tags/golang/"/>
     

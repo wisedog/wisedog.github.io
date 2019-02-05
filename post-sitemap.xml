@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://dev.wisedog.net/2019/02/04/publish-vue-package/</loc>
+        <lastmod>2019-02-05T14:04:53.741Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dev.wisedog.net/2018/12/29/google-app-engine-python3-pros-cons/</loc>
         <lastmod>2019-02-02T02:36:31.789Z</lastmod>
         <changefreq>weekly</changefreq>
