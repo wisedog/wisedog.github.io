@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dev.wisedog.net/"/>
-  <updated>2019-02-05T14:04:53.741Z</updated>
+  <updated>2019-04-14T01:16:51.199Z</updated>
   <id>http://dev.wisedog.net/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Firebase 한글 문서는 안보는게 좋겠다</title>
+    <link href="http://dev.wisedog.net/2019/04/14/do-not-believe-korean-firebase-docs/"/>
+    <id>http://dev.wisedog.net/2019/04/14/do-not-believe-korean-firebase-docs/</id>
+    <published>2019-04-14T04:53:03.000Z</published>
+    <updated>2019-04-14T01:16:51.199Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#xC9C0;&amp;#xB09C; 2&amp;#xC6D4;&amp;#xB2EC;&amp;#xC5D0; Google Cloud + Firebase &amp;#xB97C; &amp;#xC0AC;&amp;#xC6A9;&amp;#xD574;&amp;#xC11C; &amp;#xD3AB;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Firebase" scheme="http://dev.wisedog.net/tags/Firebase/"/>
+    
+      <category term="Firestore" scheme="http://dev.wisedog.net/tags/Firestore/"/>
+    
+      <category term="Google" scheme="http://dev.wisedog.net/tags/Google/"/>
+    
+      <category term="파이어스토어" scheme="http://dev.wisedog.net/tags/%ED%8C%8C%EC%9D%B4%EC%96%B4%EC%8A%A4%ED%86%A0%EC%96%B4/"/>
+    
+      <category term="파이어베이스" scheme="http://dev.wisedog.net/tags/%ED%8C%8C%EC%9D%B4%EC%96%B4%EB%B2%A0%EC%9D%B4%EC%8A%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue 패키지 개발하기</title>

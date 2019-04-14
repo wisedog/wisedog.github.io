@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://dev.wisedog.net/2019/04/14/do-not-believe-korean-firebase-docs/</loc>
+        <lastmod>2019-04-14T01:16:51.199Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dev.wisedog.net/2019/02/04/publish-vue-package/</loc>
         <lastmod>2019-02-05T14:04:53.741Z</lastmod>
         <changefreq>weekly</changefreq>
