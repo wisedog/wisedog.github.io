@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6분 read (About 855 words)
+                    6분 read (About 881 words)
                 </span>
                 
             </div>
@@ -161,7 +161,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/18/타입스크립트-전면-도입기/">타입스크립트-전면-도입기</a>
+                <a class="has-link-black-ter" href="/2019/06/18/타입스크립트-전면-도입기/">타입스크립트 전면 도입기</a>
             
         </h1>
         <div class="content">
@@ -177,6 +177,7 @@
 <figure class="highlight typescript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> { ItemBody } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@mycompany/interface&apos;</span>;</span><br><span class="line"><span class="hljs-comment">/* &#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB97C; &#xC5C6;&#xC568; &#xC218; &#xC788;&#xB2E4;.</span></span><br><span class="line"><span class="hljs-comment">interface ItemBody {</span></span><br><span class="line"><span class="hljs-comment">  name: string;</span></span><br><span class="line"><span class="hljs-comment">  quantity: number;</span></span><br><span class="line"><span class="hljs-comment">}*/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//// &#xC0DD;&#xB7B5;</span></span><br><span class="line"><span class="hljs-keyword">class</span> APIs {</span><br><span class="line">  <span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> doSend(item: ItemBody) {</span><br><span class="line">    <span class="hljs-keyword">try</span> {</span><br><span class="line">      <span class="hljs-keyword">await</span> axios.post(<span class="hljs-string">`<span class="hljs-subst">${BASE_URL}</span>/item`</span>, item);</span><br><span class="line">    } <span class="hljs-keyword">catch</span> (e) {</span><br><span class="line">      <span class="hljs-comment">// .... </span></span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"><span class="hljs-comment">//// &#xD6C4;&#xB7B5;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>&#xC5EC;&#xAE30;&#xC11C;&#xB294; &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xAC00; &#xB2E8;&#xC21C;&#xD788; 2&#xAC1C;&#xC778; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB9CC; &#xB300;&#xC0C1;&#xC73C;&#xB85C; &#xD588;&#xC9C0;&#xB9CC;, &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xAC00; &#xB9CE;&#xC544;&#xC9C8; &#xC218;&#xB85D;, &#xADF8; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xAC00; &#xB9CE;&#xC544;&#xC9C8; &#xC218;&#xB85D; &#xAC15;&#xB825;&#xD55C; &#xD6A8;&#xACFC;&#xB97C; &#xBC1C;&#xD718;&#xD588;&#xB2E4;. &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC;&#xC5D0;&#xC11C; &#xD798;&#xB4E4;&#xAC8C; Swagger&#xB97C; &#xBCF4;&#xACE0; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC5C8;&#xACE0;,&#xB9CC;&#xB4E4;&#xB2E4;&#xAC00; &#xC0DD;&#xAE30;&#xB294; &#xD734;&#xBA3C; &#xC5D0;&#xB7EC;&#xB3C4; &#xBC29;&#xC9C0;&#xD560; &#xC218; &#xC788;&#xC5C8;&#xB2E4;. &#xB2E8;&#xC21C;&#xD788; npm&#xC744; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD568;&#xC73C;&#xB85C;&#xC11C; API&#xC640; &#xC2F1;&#xD06C;&#xB97C; &#xB9DE;&#xCD94;&#xAE30;&#xB3C4; &#xC26C;&#xC6E0;&#xB2E4;. &#xBB34;&#xC5C7;&#xBCF4;&#xB2E4; &#xAC01;&#xAC01;&#xC758; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC5D0;&#xC11C; &#xAC01;&#xAC01; &#xAD00;&#xB9AC;&#xD558;&#xB358; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xCF54;&#xB4DC;&#xB97C; &#xD1B5;&#xD569;&#xAD00;&#xB9AC; &#xD560; &#xC218; &#xC788;&#xC5B4;&#xC11C; &#xAD49;&#xC7A5;&#xD788; &#xC0DD;&#xC0B0;&#xC131;&#xC774; &#xB192;&#xC544;&#xC84C;&#xB2E4;.</p>
 <p>&#xD544;&#xC694;&#xC131;&#xC744; &#xB290;&#xAEF4;&#xC11C; &#xB9CC;&#xB4E4;&#xC5C8;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB2E4;&#xB978; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC5D0;&#xC11C;&#xB294; &#xC774;&#xB807;&#xAC8C; &#xC4F0;&#xB294;&#xC9C0;&#xB294; &#xC798; &#xBAA8;&#xB974;&#xACA0;&#xC9C0;&#xB9CC; &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC;&#xC640; &#xBC31;&#xC5D4;&#xB4DC; &#xBAA8;&#xB450; &#xD0C0;&#xC785;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC4F4;&#xB2E4;&#xBA74; &#xD55C; &#xBC88; &#xB3C4;&#xC785;&#xD574;&#xBCF4;&#xBA74; &#xC88B;&#xACA0;&#xB2E4;.</p>
+<p>P.S &#xB450; &#xB2EC; &#xBC18;&#xB9CC;&#xC5D0; &#xC131;&#xACF5;&#xC801;&#xC73C;&#xB85C; C#&#xC5D0;&#xC11C; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB85C; &#xC774;&#xC804;&#xD588;&#xB2E4;.</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -392,14 +393,14 @@
             
             <a href="/2019/06/18/타입스크립트-전면-도입기/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="타입스크립트-전면-도입기">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="타입스크립트 전면 도입기">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T12:53:11.000Z">2019-06-18</time></div>
-                    <a href="/2019/06/18/타입스크립트-전면-도입기/" class="has-link-black-ter is-size-6">타입스크립트-전면-도입기</a>
+                    <a href="/2019/06/18/타입스크립트-전면-도입기/" class="has-link-black-ter is-size-6">타입스크립트 전면 도입기</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/programming/">programming</a> / <a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>
                     </p>
