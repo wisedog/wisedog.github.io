@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dev.wisedog.net/"/>
-  <updated>2019-05-13T13:34:05.896Z</updated>
+  <updated>2019-06-18T14:18:42.465Z</updated>
   <id>http://dev.wisedog.net/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>타입스크립트-전면-도입기</title>
+    <link href="http://dev.wisedog.net/2019/06/18/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A0%84%EB%A9%B4-%EB%8F%84%EC%9E%85%EA%B8%B0/"/>
+    <id>http://dev.wisedog.net/2019/06/18/타입스크립트-전면-도입기/</id>
+    <published>2019-06-18T12:53:11.000Z</published>
+    <updated>2019-06-18T14:18:42.465Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#xD68C;&amp;#xC0AC; &amp;#xAC1C;&amp;#xBC1C;&amp;#xD300;&amp;#xC5D0; &amp;#xC0AC;&amp;#xC815;&amp;#xC774; &amp;#xC788;&amp;#xC5B4;&amp;#xC11C; &amp;#xC9C0;&amp;#xB09C; 3&amp;#xC6D4;
+        
+      
+    
+    </summary>
+    
+      <category term="programming" scheme="http://dev.wisedog.net/categories/programming/"/>
+    
+      <category term="javascript" scheme="http://dev.wisedog.net/categories/programming/javascript/"/>
+    
+    
+      <category term="Javascript" scheme="http://dev.wisedog.net/tags/Javascript/"/>
+    
+      <category term="ECMAScript" scheme="http://dev.wisedog.net/tags/ECMAScript/"/>
+    
+      <category term="자바스트립트" scheme="http://dev.wisedog.net/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%8A%B8%EB%A6%BD%ED%8A%B8/"/>
+    
+      <category term="Typescript" scheme="http://dev.wisedog.net/tags/Typescript/"/>
+    
+      <category term="타입스크립트" scheme="http://dev.wisedog.net/tags/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>현재 개발자 채용 시장에 대한 작은 생각</title>

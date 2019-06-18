@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>타입스크립트-전면-도입기 - Jongha Kim&#39;s Dev story</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="&amp;#xD68C;&amp;#xC0AC; &amp;#xAC1C;&amp;#xBC1C;&amp;#xD300;&amp;#xC5D0; &amp;#xC0AC;&amp;#xC815;&amp;#xC774; &amp;#xC788;&amp;#xC5B4;&amp;#xC11C; &amp;#xC9C0;&amp;#xB09C; 3&amp;#xC6D4; &amp;#xB9D0;&amp;#xBD80;&amp;#xD130; &amp;#xAC1C;&amp;#xBC1C;&amp;#xD300;&amp;#xC744; &amp;#xC774;&amp;#xB04C">
+<meta name="keywords" content="Javascript,ECMAScript,자바스트립트,Typescript,타입스크립트">
+<meta property="og:type" content="article">
+<meta property="og:title" content="타입스크립트-전면-도입기">
+<meta property="og:url" content="http://dev.wisedog.net/2019/06/18/타입스크립트-전면-도입기/index.html">
+<meta property="og:site_name" content="Jongha Kim&#39;s Dev story">
+<meta property="og:description" content="&amp;#xD68C;&amp;#xC0AC; &amp;#xAC1C;&amp;#xBC1C;&amp;#xD300;&amp;#xC5D0; &amp;#xC0AC;&amp;#xC815;&amp;#xC774; &amp;#xC788;&amp;#xC5B4;&amp;#xC11C; &amp;#xC9C0;&amp;#xB09C; 3&amp;#xC6D4; &amp;#xB9D0;&amp;#xBD80;&amp;#xD130; &amp;#xAC1C;&amp;#xBC1C;&amp;#xD300;&amp;#xC744; &amp;#xC774;&amp;#xB04C">
+<meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2019-06-18T14:18:42.465Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="타입스크립트-전면-도입기">
+<meta name="twitter:description" content="&amp;#xD68C;&amp;#xC0AC; &amp;#xAC1C;&amp;#xBC1C;&amp;#xD300;&amp;#xC5D0; &amp;#xC0AC;&amp;#xC815;&amp;#xC774; &amp;#xC788;&amp;#xC5B4;&amp;#xC11C; &amp;#xC9C0;&amp;#xB09C; 3&amp;#xC6D4; &amp;#xB9D0;&amp;#xBD80;&amp;#xD130; &amp;#xAC1C;&amp;#xBC1C;&amp;#xD300;&amp;#xC744; &amp;#xC774;&amp;#xB04C">
+
+
+
+<link rel="alternative" href="/atom.xml" title="타입스크립트-전면-도입기" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116574812-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116574812-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/mylogo.png" alt="타입스크립트-전면-도입기" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-18T12:53:11.000Z">2019-06-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/programming/">programming</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6분 read (About 855 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                타입스크립트-전면-도입기
+            
+        </h1>
+        <div class="content">
+            <p>&#xD68C;&#xC0AC; &#xAC1C;&#xBC1C;&#xD300;&#xC5D0; &#xC0AC;&#xC815;&#xC774; &#xC788;&#xC5B4;&#xC11C; &#xC9C0;&#xB09C; 3&#xC6D4; &#xB9D0;&#xBD80;&#xD130; &#xAC1C;&#xBC1C;&#xD300;&#xC744; &#xC774;&#xB04C;&#xAC8C; &#xB418;&#xC5C8;&#xB2E4;. &#xCCAB; &#xBC88;&#xC9F8; &#xC784;&#xBB34;&#xB294; &#xAE30;&#xC874; &#xBC31;&#xC5D4;&#xB4DC;&#xC758; C#, CQRS, Event-Sourcing, DDD&#xB97C; &#xAC77;&#xC5B4;&#xB0B4;&#xB294; &#xC77C;&#xC774;&#xC5C8;&#xB2E4;. &#xC88B;&#xC740; &#xB514;&#xC790;&#xC778; &#xD328;&#xD134;&#xACFC; &#xAC1C;&#xBC1C;&#xBC29;&#xBC95;&#xB860;&#xACFC; &#xC5B8;&#xC5B4;&#xAE34; &#xD558;&#xC9C0;&#xB9CC; &#xD604; &#xAC1C;&#xBC1C;&#xD300; &#xC544;&#xB2C8; &#xD55C;&#xAD6D;&#xC5D0;&#xC11C;&#xB294; &#xC880; &#xC27D;&#xC9C0; &#xC54A;&#xC740; &#xACB0;&#xC815;&#xC774;&#xB2E4;. &#xC774;&#xC720;&#xB294; &#xB9CE;&#xC9C0;&#xB9CC; &#xD55C; &#xB9C8;&#xB514;&#xB85C; &#xC598;&#xAE30;&#xD558;&#xC790;&#xBA74; &#xD604; &#xAC1C;&#xBC1C;&#xD300;&#xC5D0; &#xC548;&#xB9DE;&#xB294; &#xC637;&#xC774;&#xC5C8;&#xB2E4;.</p>
+<p>&#xBCC0;&#xD654;&#xAC00; &#xC0DD;&#xAE34; &#xAC1C;&#xBC1C;&#xD300;&#xC740; Javascript &#xAE30;&#xBC18; &#xD504;&#xB860;&#xD2B8; 1&#xBA85;, &#xD480;&#xC2A4;&#xD0DD; 2&#xBA85;&#xC774;&#xC5C8;&#xACE0; C#/Java Entry Level 1&#xBA85; &#xADF8;&#xB9AC;&#xACE0; &#xB098;&#xAE4C;&#xC9C0; 5&#xBA85;&#xC774;&#xC5C8;&#xB2E4;. &#xB9C8;&#xC74C; &#xBA39;&#xC740;&#xB300;&#xB85C; &#xD558;&#xC790;&#xBA74; &#xBC31;&#xC5D4;&#xB4DC;&#xB294; Python &#xD639;&#xC740; Go&#xB85C; &#xD558;&#xACE0; &#xC2F6;&#xC5C8;&#xC9C0;&#xB9CC; &#xC791;&#xC740; &#xD68C;&#xC0AC;&#xC77C;&#xC218;&#xB85D; &#xD14C;&#xD06C; &#xC2A4;&#xD0DD;&#xC744; &#xD1B5;&#xC77C;&#xD574;&#xC57C; &#xD55C;&#xB2E4;&#xB294;&#xAC8C; &#xB098;&#xC758; &#xC9C0;&#xB860;&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBC31;&#xC5D4;&#xB4DC;&#xB294; Express&#xB97C; &#xB3C4;&#xC785;&#xD558;&#xAE30;&#xB85C; &#xD588;&#xB2E4;.</p>
+<p>Express &#xB3C4;&#xC785;&#xACFC; &#xD568;&#xAED8; &#xD55C; &#xAC00;&#xC9C0; &#xB3C4;&#xC785;&#xD55C; &#xD14C;&#xD06C; &#xC2A4;&#xD0DD;&#xC740; Typescript&#xB2E4;. &#xD604;&#xC7AC; &#xC6F9; &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC;&#xC778; vue.js&#xC640; &#xBC31;&#xC624;&#xD53C;&#xC2A4; &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC;&#xC778; react.js&#xB294; &#xC774;&#xBBF8; Typescript&#xC600;&#xB2E4;. &#xC774; &#xCC38;&#xC5D0; Express&#xB3C4; Typescript&#xB97C; &#xB3C4;&#xC785;&#xD558;&#xAE30;&#xB85C; &#xD588;&#xACE0; &#xCD5C;&#xC885;&#xC801;&#xC73C;&#xB85C; <a href="https://github.com/thiagobustamante/typescript-rest" target="_blank" rel="noopener">Typescript Rest</a>&#xC744; &#xC120;&#xD0DD;&#xD588;&#xB2E4;.</p>
+<p>&#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC;&#xC640; &#xBC31;&#xC5D4;&#xB4DC;&#xB97C; &#xBAA8;&#xB450; Typescript&#xB85C; &#xD1B5;&#xC77C;&#xD558;&#xACE0; &#xADF8; &#xC7A5;&#xC810;&#xC744; &#xADF9;&#xB300;&#xD654; &#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xC591;&#xCABD; &#xC0AC;&#xC774;&#xC758; API&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB098; Enum&#xC744; &#xBAA8;&#xC544;&#xB193;&#xC740; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xB9CC;&#xB4E4;&#xC5C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; Item &#xC815;&#xBCF4;&#xB97C; &#xB9CC;&#xB4DC;&#xB294; POST API&#xAC00; &#xC788;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xC790;.</p>
+<figure class="highlight typescript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> { POST, Path } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;typescript-rest&apos;</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">interface</span> ItemBody {</span><br><span class="line">  name: <span class="hljs-built_in">string</span>;</span><br><span class="line">  quantity: <span class="hljs-built_in">number</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Path</span>(<span class="hljs-string">&apos;/item&apos;</span>)</span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ItemController {</span><br><span class="line">    <span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">     * &#xC544;&#xC774;&#xD15C;&#xC744; &#xB9CC;&#xB4E0;&#xB2E4;.</span></span><br><span class="line"><span class="hljs-comment">     */</span></span><br><span class="line">    <span class="hljs-meta">@Path</span>(<span class="hljs-string">&apos;&apos;</span>)</span><br><span class="line">    <span class="hljs-meta">@POST</span></span><br><span class="line">    <span class="hljs-keyword">public</span> postItem(body: ItemBody){</span><br><span class="line">        <span class="hljs-comment">// .....</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xADF8;&#xB9AC;&#xACE0; &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC;&#xC5D0;&#xC11C; axios.js&#xB85C; &#xD574;&#xB2F9; API&#xB97C; &#xC4F4;&#xB2E4;&#xBA74; &#xC544;&#xB798;&#xC640; &#xAC19;&#xACA0;&#xB2E4;.</p>
+<figure class="highlight typescript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">interface</span> ItemBody {</span><br><span class="line">  name: <span class="hljs-built_in">string</span>;</span><br><span class="line">  quantity: <span class="hljs-built_in">number</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//// &#xC0DD;&#xB7B5;</span></span><br><span class="line"><span class="hljs-keyword">class</span> APIs {</span><br><span class="line">  <span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> doSend(item: ItemBody) {</span><br><span class="line">    <span class="hljs-keyword">try</span> {</span><br><span class="line">      <span class="hljs-keyword">await</span> axios.post(<span class="hljs-string">`<span class="hljs-subst">${BASE_URL}</span>/item`</span>, item);</span><br><span class="line">    } <span class="hljs-keyword">catch</span> (e) {</span><br><span class="line">      <span class="hljs-comment">// .... </span></span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"><span class="hljs-comment">//// &#xD6C4;&#xB7B5;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#xB450; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC5D0;&#xC11C; &#xACF5;&#xD1B5;&#xC73C;&#xB85C; &#xC4F0;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC778; <code>ItemBody</code>&#xB97C; &#xBCC4;&#xB3C4;&#xC758; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB85C; &#xBD84;&#xB9AC;, Private NPM &#xC800;&#xC7A5;&#xC18C;&#xB97C; &#xB9CC;&#xB4E4;&#xACE0; &#xC774;&#xAC78; import&#xB97C; &#xD55C;&#xB2E4;.</p>
+<figure class="highlight typescript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> { POST, Path } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;typescript-rest&apos;</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> { ItemBody } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@mycompany/interface&apos;</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* &#xC774; &#xBD80;&#xBD84;&#xC744; &#xC5C6;&#xC568; &#xC218; &#xC788;&#xB2E4;.</span></span><br><span class="line"><span class="hljs-comment">interface ItemBody {</span></span><br><span class="line"><span class="hljs-comment">  name: string;</span></span><br><span class="line"><span class="hljs-comment">  quantity: number;</span></span><br><span class="line"><span class="hljs-comment">}*/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Path</span>(<span class="hljs-string">&apos;/item&apos;</span>)</span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ItemController {</span><br><span class="line">    <span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">     * &#xC544;&#xC774;&#xD15C;&#xC744; &#xB9CC;&#xB4E0;&#xB2E4;.</span></span><br><span class="line"><span class="hljs-comment">     */</span></span><br><span class="line">    <span class="hljs-meta">@Path</span>(<span class="hljs-string">&apos;&apos;</span>)</span><br><span class="line">    <span class="hljs-meta">@POST</span></span><br><span class="line">    <span class="hljs-keyword">public</span> postItem(body: ItemBody){</span><br><span class="line">        <span class="hljs-comment">// .....</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight typescript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> { ItemBody } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@mycompany/interface&apos;</span>;</span><br><span class="line"><span class="hljs-comment">/* &#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB97C; &#xC5C6;&#xC568; &#xC218; &#xC788;&#xB2E4;.</span></span><br><span class="line"><span class="hljs-comment">interface ItemBody {</span></span><br><span class="line"><span class="hljs-comment">  name: string;</span></span><br><span class="line"><span class="hljs-comment">  quantity: number;</span></span><br><span class="line"><span class="hljs-comment">}*/</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//// &#xC0DD;&#xB7B5;</span></span><br><span class="line"><span class="hljs-keyword">class</span> APIs {</span><br><span class="line">  <span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> doSend(item: ItemBody) {</span><br><span class="line">    <span class="hljs-keyword">try</span> {</span><br><span class="line">      <span class="hljs-keyword">await</span> axios.post(<span class="hljs-string">`<span class="hljs-subst">${BASE_URL}</span>/item`</span>, item);</span><br><span class="line">    } <span class="hljs-keyword">catch</span> (e) {</span><br><span class="line">      <span class="hljs-comment">// .... </span></span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"><span class="hljs-comment">//// &#xD6C4;&#xB7B5;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#xC5EC;&#xAE30;&#xC11C;&#xB294; &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xAC00; &#xB2E8;&#xC21C;&#xD788; 2&#xAC1C;&#xC778; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB9CC; &#xB300;&#xC0C1;&#xC73C;&#xB85C; &#xD588;&#xC9C0;&#xB9CC;, &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xAC00; &#xB9CE;&#xC544;&#xC9C8; &#xC218;&#xB85D;, &#xADF8; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xAC00; &#xB9CE;&#xC544;&#xC9C8; &#xC218;&#xB85D; &#xAC15;&#xB825;&#xD55C; &#xD6A8;&#xACFC;&#xB97C; &#xBC1C;&#xD718;&#xD588;&#xB2E4;. &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC;&#xC5D0;&#xC11C; &#xD798;&#xB4E4;&#xAC8C; Swagger&#xB97C; &#xBCF4;&#xACE0; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC5C8;&#xACE0;,&#xB9CC;&#xB4E4;&#xB2E4;&#xAC00; &#xC0DD;&#xAE30;&#xB294; &#xD734;&#xBA3C; &#xC5D0;&#xB7EC;&#xB3C4; &#xBC29;&#xC9C0;&#xD560; &#xC218; &#xC788;&#xC5C8;&#xB2E4;. &#xB2E8;&#xC21C;&#xD788; npm&#xC744; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD568;&#xC73C;&#xB85C;&#xC11C; API&#xC640; &#xC2F1;&#xD06C;&#xB97C; &#xB9DE;&#xCD94;&#xAE30;&#xB3C4; &#xC26C;&#xC6E0;&#xB2E4;. &#xBB34;&#xC5C7;&#xBCF4;&#xB2E4; &#xAC01;&#xAC01;&#xC758; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC5D0;&#xC11C; &#xAC01;&#xAC01; &#xAD00;&#xB9AC;&#xD558;&#xB358; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xCF54;&#xB4DC;&#xB97C; &#xD1B5;&#xD569;&#xAD00;&#xB9AC; &#xD560; &#xC218; &#xC788;&#xC5B4;&#xC11C; &#xAD49;&#xC7A5;&#xD788; &#xC0DD;&#xC0B0;&#xC131;&#xC774; &#xB192;&#xC544;&#xC84C;&#xB2E4;.</p>
+<p>&#xD544;&#xC694;&#xC131;&#xC744; &#xB290;&#xAEF4;&#xC11C; &#xB9CC;&#xB4E4;&#xC5C8;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB2E4;&#xB978; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC5D0;&#xC11C;&#xB294; &#xC774;&#xB807;&#xAC8C; &#xC4F0;&#xB294;&#xC9C0;&#xB294; &#xC798; &#xBAA8;&#xB974;&#xACA0;&#xC9C0;&#xB9CC; &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC;&#xC640; &#xBC31;&#xC5D4;&#xB4DC; &#xBAA8;&#xB450; &#xD0C0;&#xC785;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC4F4;&#xB2E4;&#xBA74; &#xD55C; &#xBC88; &#xB3C4;&#xC785;&#xD574;&#xBCF4;&#xBA74; &#xC88B;&#xACA0;&#xB2E4;.</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/ECMAScript/">ECMAScript</a>, <a class="has-link-grey -link" href="/tags/Javascript/">Javascript</a>, <a class="has-link-grey -link" href="/tags/Typescript/">Typescript</a>, <a class="has-link-grey -link" href="/tags/자바스트립트/">자바스트립트</a>, <a class="has-link-grey -link" href="/tags/타입스크립트/">타입스크립트</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/13/korean-developer-job-distribution/">
+                <span class="level-item">현재 개발자 채용 시장에 대한 작은 생각</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">댓글</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://dev.wisedog.net/2019/06/18/타입스크립트-전면-도입기/';
+        this.page.identifier = '2019/06/18/타입스크립트-전면-도입기/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'github-myblog' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/profile_small.jpg" alt="Jongha Kim">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Jongha Kim
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Software Developer/ Author
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Republic of Korea</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        11
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        8
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        39
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="/">
+                팔로우</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/wisedog">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/jongha_the_dev">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/cloud/">
+            <span class="level-start">
+                <span class="level-item">cloud</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/cloud/GCP/">
+            <span class="level-start">
+                <span class="level-item">GCP</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/programming/">
+            <span class="level-start">
+                <span class="level-item">programming</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">7</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/programming/GCP/">
+            <span class="level-start">
+                <span class="level-item">GCP</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/programming/golang/">
+            <span class="level-start">
+                <span class="level-item">golang</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/programming/javascript/">
+            <span class="level-start">
+                <span class="level-item">javascript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/programming/node/">
+            <span class="level-start">
+                <span class="level-item">node</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/18/타입스크립트-전면-도입기/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="타입스크립트-전면-도입기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T12:53:11.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/타입스크립트-전면-도입기/" class="has-link-black-ter is-size-6">타입스크립트-전면-도입기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/programming/">programming</a> / <a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/13/korean-developer-job-distribution/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="현재 개발자 채용 시장에 대한 작은 생각">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:04:05.000Z">2019-05-13</time></div>
+                    <a href="/2019/05/13/korean-developer-job-distribution/" class="has-link-black-ter is-size-6">현재 개발자 채용 시장에 대한 작은 생각</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/14/do-not-believe-korean-firebase-docs/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Firebase 한글 문서는 안보는게 좋겠다">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-14T04:53:03.000Z">2019-04-14</time></div>
+                    <a href="/2019/04/14/do-not-believe-korean-firebase-docs/" class="has-link-black-ter is-size-6">Firebase 한글 문서는 안보는게 좋겠다</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/programming/">programming</a> / <a class="has-link-grey -link" href="/categories/programming/GCP/">GCP</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/02/04/publish-vue-package/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Vue 패키지 개발하기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-04T05:12:29.000Z">2019-02-04</time></div>
+                    <a href="/2019/02/04/publish-vue-package/" class="has-link-black-ter is-size-6">Vue 패키지 개발하기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/programming/">programming</a> / <a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/29/google-app-engine-python3-pros-cons/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="구글 앱 엔진 파이썬3 변경사항">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-29T11:43:56.000Z">2018-12-29</time></div>
+                    <a href="/2018/12/29/google-app-engine-python3-pros-cons/" class="has-link-black-ter is-size-6">구글 앱 엔진 파이썬3 변경사항</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/cloud/">cloud</a> / <a class="has-link-grey -link" href="/categories/cloud/GCP/">GCP</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/App-Engine/" style="font-size: 15px;">App Engine</a> <a href="/tags/ECMAScript/" style="font-size: 15px;">ECMAScript</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Firebase/" style="font-size: 10px;">Firebase</a> <a href="/tags/Firestore/" style="font-size: 10px;">Firestore</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 10px;">Google Cloud Platform</a> <a href="/tags/Hoisting/" style="font-size: 10px;">Hoisting</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unit-test/" style="font-size: 10px;">Unit test</a> <a href="/tags/appengine/" style="font-size: 10px;">appengine</a> <a href="/tags/datastore/" style="font-size: 10px;">datastore</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/google-cloud-platform/" style="font-size: 15px;">google cloud platform</a> <a href="/tags/jest/" style="font-size: 10px;">jest</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/npm-패키지/" style="font-size: 10px;">npm 패키지</a> <a href="/tags/npm-퍼블리싱/" style="font-size: 10px;">npm 퍼블리싱</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-js/" style="font-size: 10px;">vue.js</a> <a href="/tags/개발자-구인시장/" style="font-size: 10px;">개발자 구인시장</a> <a href="/tags/개발자-구직시장/" style="font-size: 10px;">개발자 구직시장</a> <a href="/tags/구글-앱-엔진/" style="font-size: 15px;">구글 앱 엔진</a> <a href="/tags/구글-클라우드-플랫폼/" style="font-size: 15px;">구글 클라우드 플랫폼</a> <a href="/tags/삽질/" style="font-size: 10px;">삽질</a> <a href="/tags/앱엔진/" style="font-size: 15px;">앱엔진</a> <a href="/tags/엄격-모드/" style="font-size: 10px;">엄격 모드</a> <a href="/tags/유닛-테스트/" style="font-size: 10px;">유닛 테스트</a> <a href="/tags/자바스트립트/" style="font-size: 15px;">자바스트립트</a> <a href="/tags/타입스크립트/" style="font-size: 10px;">타입스크립트</a> <a href="/tags/파이어베이스/" style="font-size: 10px;">파이어베이스</a> <a href="/tags/파이어스토어/" style="font-size: 10px;">파이어스토어</a> <a href="/tags/프로그래밍/" style="font-size: 10px;">프로그래밍</a> <a href="/tags/호이스팅/" style="font-size: 10px;">호이스팅</a>
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/mylogo.png" alt="타입스크립트-전면-도입기" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Jongha Kim&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: 'Pages',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
