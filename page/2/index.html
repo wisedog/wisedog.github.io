@@ -133,6 +133,90 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-04-04T01:21:16.000Z">2018-04-04</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/programming/">programming</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/programming/node/">node</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 read (About 624 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/04/04/how-to-use-jest-with-express-js/">Jest로 Express 테스트하기</a>
+            
+        </h1>
+        <div class="content">
+            <p><code>Jest</code>&#xB85C; Express API &#xC720;&#xB2DB; &#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xD560; &#xB54C; &#xACAA;&#xC5C8;&#xB358; &#xBB38;&#xC81C;&#xB97C; &#xB2E4;&#xB978; &#xC0AC;&#xB78C;&#xB4E4;&#xB3C4; &#xC548; &#xACAA;&#xC5C8;&#xC73C;&#xBA74; &#xD558;&#xB294; &#xBC14;&#xB7A8;&#xC5D0;&#xC11C; &#xAE00;&#xC744; &#xC37C;&#xB2E4;. &#xC6D0;&#xB798; &#xC720;&#xB2DB; &#xD14C;&#xC2A4;&#xD2B8;&#xB294; <code>Mocha</code>&#xC640; <code>Chai</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD588;&#xB294;&#xB370; &#xC774;&#xBC88;&#xC5D0; &#xD55C; &#xBC88; <code>Jest</code>&#xB85C; &#xD14C;&#xC2A4;&#xD2B8; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xB97C; &#xBC14;&#xAFD4;&#xBCF4;&#xC558;&#xB2E4;.</p>
+<p><code>Jest</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; &#xC77C;&#xB2E8; Install.</p>
+<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev babel-cli, babel-preset-env, jest, supertest</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xC544;&#xB798;&#xB294; &#xAC04;&#xB2E8;&#xD55C; &#xC6F9; &#xC11C;&#xBC84; &#xCF54;&#xB4DC;&#xB2E4;.</p>
+<figure class="highlight javascript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// app.js</span></span><br><span class="line"><span class="hljs-keyword">import</span> express <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;express&apos;</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> app = express();</span><br><span class="line"><span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;</span><br><span class="line"></span><br><span class="line">app.get(<span class="hljs-string">&apos;/hello&apos;</span>, (req, res) =&gt; {</span><br><span class="line">  res.send(<span class="hljs-string">&apos;world!&apos;</span>);</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">app.get(<span class="hljs-string">&apos;/status&apos;</span>, (req, res) =&gt; {</span><br><span class="line">  res.send(<span class="hljs-string">&apos;ok&apos;</span>);</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">app.listen(port);</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">module</span>.exports = app;</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xB9E4;&#xC6B0; &#xAC04;&#xB2E8;&#xD55C; &#xC774; &#xC6F9; &#xC11C;&#xBC84;&#xB294; &#xB450; &#xAC1C;&#xC758; &#xB77C;&#xC6B0;&#xD2B8;(<code>/hello</code>, <code>/status</code>)&#xBC16;&#xC5D0; &#xC5C6;&#xB2E4;. <code>/hello</code> &#xB77C;&#xC6B0;&#xD2B8;&#xB294; &#xB2E8;&#xC21C;&#xD558;&#xAC8C; &#x201C;world!&#x201D; &#xBB38;&#xC790;&#xC5F4;&#xB9CC; &#xB9AC;&#xD134;&#xD558;&#xBA70; <code>/status</code>&#xB294; &#xB2E8;&#xC21C;&#xD558;&#xAC8C; &#x201C;ok&#x201D; &#xBB38;&#xC790;&#xC5F4;&#xB9CC; &#xB9AC;&#xD134;&#xD55C;&#xB2E4;. </p>
+<p>&#xC774;&#xC81C; Jest&#xC640; Supertest&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xC774; &#xB77C;&#xC6B0;&#xD2B8;&#xB97C; &#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xD574;&#xBCF4;&#xACA0;&#xB2E4;.</p>
+<p>&#xBA3C;&#xC800; <code>/hello</code></p>
+<figure class="highlight javascript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// tests/hello.test.js</span></span><br><span class="line"><span class="hljs-keyword">import</span> request <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;supertest&apos;</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> app <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../app&apos;</span>;</span><br><span class="line"></span><br><span class="line">describe(<span class="hljs-string">&apos;Test /hello&apos;</span>, () =&gt; {</span><br><span class="line">  it (<span class="hljs-string">&apos;should return world!&apos;</span>, (done) =&gt; {</span><br><span class="line">    request(app).get(<span class="hljs-string">&apos;/hello&apos;</span>).then(<span class="hljs-function">(<span class="hljs-params">response</span>) =&gt;</span> {</span><br><span class="line">      expect(response.text).toBe(<span class="hljs-string">&apos;world!&apos;</span>);</span><br><span class="line">      done();</span><br><span class="line">    });</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<p>Test!<br><img src="/images/screenshot_success_jest_test.png" alt=""></p>
+<p>&#xAE54;&#xB054;&#xD558;&#xAC8C; &#xC131;&#xACF5;&#xD55C; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xADF8;&#xB7FC; &#xC774;&#xC81C; <code>/status</code>&#xC5D0; &#xB300;&#xD55C; &#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xD574;&#xBCF4;&#xC790;. &#xC774; &#xD14C;&#xC2A4;&#xD2B8;&#xB294; &#xB2E4;&#xB978; &#xD30C;&#xC77C;&#xC5D0; &#xC791;&#xC131;&#xD558;&#xB3C4;&#xB85D; &#xD55C;&#xB2E4;. &#xBB3C;&#xB860; &#xC2DD;&#xC740; &#xC8FD; &#xBA39;&#xAE30;&#xB2E4;.</p>
+<figure class="highlight javascript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// tests/status.test.js</span></span><br><span class="line"><span class="hljs-keyword">import</span> request <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;supertest&apos;</span>;</span><br><span class="line"><span class="hljs-keyword">import</span> app <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../app&apos;</span>;</span><br><span class="line"></span><br><span class="line">describe(<span class="hljs-string">&apos;Test /status&apos;</span>, () =&gt; {</span><br><span class="line">  it (<span class="hljs-string">&apos;should return ok&apos;</span>, (done) =&gt; {</span><br><span class="line">    request(app).get(<span class="hljs-string">&apos;/status&apos;</span>).then(<span class="hljs-function">(<span class="hljs-params">response</span>) =&gt;</span> {</span><br><span class="line">      expect(response.text).toBe(<span class="hljs-string">&apos;ok&apos;</span>);</span><br><span class="line">      done();</span><br><span class="line">    });</span><br><span class="line">  });</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<p>Test! <span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/1f525.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f525.png?v8">&#x1F525;</span></p>
+<p><img src="/images/screenshot_fail_jest_test.png" alt=""></p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/1f631.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f631.png?v8">&#x1F631;</span> &#xB2F9;&#xC5F0;&#xD788; &#xC131;&#xACF5;&#xD560; &#xC904; &#xC54C;&#xC558;&#xB358; &#xD14C;&#xC2A4;&#xD2B8;&#xAC00; <code>EADDRINUSE</code> &#xC5D0;&#xB7EC;&#xB97C; &#xB0B4;&#xBA74;&#xC11C; &#xC2E4;&#xD328;&#xD588;&#xB2E4;. &#xBB38;&#xC81C;&#xB294; &#xCCAB; &#xBC88;&#xC9F8; &#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74;&#xC11C; &#xC11C;&#xBC84;&#xB294; &#xC544;&#xC9C1;&#xB3C4; 3000&#xBC88; &#xD3EC;&#xD2B8;&#xB97C; listen &#xD558;&#xACE0; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xB450; &#xBC88;&#xC9F8; &#xD14C;&#xC2A4;&#xD2B8;&#xC5D0;&#xC11C; &#xB2E4;&#xC2DC; import app from &#x2018;../app&#x2019; &#xC744; &#xC2E4;&#xD589;&#xD558;&#xBA74; &#xC774;&#xC804; &#xD14C;&#xC2A4;&#xD2B8;&#xC5D0;&#xC11C; &#xC774;&#xBBF8; listen&#xD558;&#xACE0; &#xC788;&#xB294; 3000&#xBC88; &#xD3EC;&#xD2B8;&#xB97C; &#xB2E4;&#xC2DC; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBB38;&#xC81C;&#xAC00; &#xBC1C;&#xC0DD;&#xD55C; &#xAC83;&#xC774;&#xC5C8;&#xB2E4;.</p>
+<p>&#xC774; &#xBB38;&#xC81C;&#xB97C; &#xD574;&#xACB0;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; &#xD14C;&#xC2A4;&#xD2B8;&#xAC00; &#xC544;&#xB2D0; &#xACBD;&#xC6B0;&#xC5D0;&#xB9CC; 3000&#xBC88; &#xD3EC;&#xD2B8;&#xB97C; &#xC5F4;&#xB3C4;&#xB85D; &#xBCC0;&#xACBD;&#xD574;&#xC57C; &#xD55C;&#xB2E4;. &#xC5B4;&#xCC28;&#xD53C; &#xD14C;&#xC2A4;&#xD2B8; &#xD658;&#xACBD;&#xC77C; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; <code>Supertest</code>&#xB97C; &#xD1B5;&#xD574;&#xC11C; &#xC11C;&#xBC84;&#xB97C; &#xAD6C;&#xB3D9;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xD3EC;&#xD2B8;&#xB97C; &#xC5F4; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; package.json&#xC744; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xBC14;&#xAFBC;&#xB2E4;.</p>
+<figure class="highlight json hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  <span class="hljs-attr">&quot;scripts&quot;</span>: {</span><br><span class="line">    <span class="hljs-attr">&quot;unit&quot;</span>: <span class="hljs-string">&quot;NODE_ENV=test jest tests/*.test.js --forceExit&quot;</span>,</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xADF8;&#xB9AC;&#xACE0; <code>app.js</code>&#xB97C; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xBC14;&#xAFBC;&#xB2E4;.</p>
+<figure class="highlight javascript hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// ...</span></span><br><span class="line"><span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;test&apos;</span>) {</span><br><span class="line">  app.listen(port);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xB2E4;&#xC2DC; &#xD55C; &#xBC88; &#xC2E4;&#xD589;&#xD558;&#xBA74;</p>
+<p><img src="/images/screenshot_final_success_jest_test.png" alt=""></p>
+<p>&#xC131;&#xACF5;! </p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-03-28T14:15:53.000Z">2018-03-28</time>
                 
                 <div class="level-item">
@@ -261,7 +345,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        11
+                        12
                     </p>
                 </div>
             </div>
@@ -281,7 +365,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        39
+                        40
                     </p>
                 </div>
             </div>
@@ -349,7 +433,7 @@
                 <span class="level-item">programming</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">7</span>
+                <span class="level-item tag">8</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/programming/GCP/">
@@ -373,7 +457,7 @@
                 <span class="level-item">javascript</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/programming/node/">
@@ -395,6 +479,25 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/03/코딜리티-Codility-첫-경험-데모-문제-1번/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="코딜리티(Codility) 첫 경험 - 데모 문제 1번">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-03T13:59:50.000Z">2019-08-03</time></div>
+                    <a href="/2019/08/03/코딜리티-Codility-첫-경험-데모-문제-1번/" class="has-link-black-ter is-size-6">코딜리티(Codility) 첫 경험 - 데모 문제 1번</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/programming/">programming</a> / <a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -472,25 +575,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2018/12/29/google-app-engine-python3-pros-cons/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="구글 앱 엔진 파이썬3 변경사항">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-29T11:43:56.000Z">2018-12-29</time></div>
-                    <a href="/2018/12/29/google-app-engine-python3-pros-cons/" class="has-link-black-ter is-size-6">구글 앱 엔진 파이썬3 변경사항</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/cloud/">cloud</a> / <a class="has-link-grey -link" href="/categories/cloud/GCP/">GCP</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -501,7 +585,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/App-Engine/" style="font-size: 15px;">App Engine</a> <a href="/tags/ECMAScript/" style="font-size: 15px;">ECMAScript</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Firebase/" style="font-size: 10px;">Firebase</a> <a href="/tags/Firestore/" style="font-size: 10px;">Firestore</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 10px;">Google Cloud Platform</a> <a href="/tags/Hoisting/" style="font-size: 10px;">Hoisting</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unit-test/" style="font-size: 10px;">Unit test</a> <a href="/tags/appengine/" style="font-size: 10px;">appengine</a> <a href="/tags/datastore/" style="font-size: 10px;">datastore</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/google-cloud-platform/" style="font-size: 15px;">google cloud platform</a> <a href="/tags/jest/" style="font-size: 10px;">jest</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/npm-패키지/" style="font-size: 10px;">npm 패키지</a> <a href="/tags/npm-퍼블리싱/" style="font-size: 10px;">npm 퍼블리싱</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-js/" style="font-size: 10px;">vue.js</a> <a href="/tags/개발자-구인시장/" style="font-size: 10px;">개발자 구인시장</a> <a href="/tags/개발자-구직시장/" style="font-size: 10px;">개발자 구직시장</a> <a href="/tags/구글-앱-엔진/" style="font-size: 15px;">구글 앱 엔진</a> <a href="/tags/구글-클라우드-플랫폼/" style="font-size: 15px;">구글 클라우드 플랫폼</a> <a href="/tags/삽질/" style="font-size: 10px;">삽질</a> <a href="/tags/앱엔진/" style="font-size: 15px;">앱엔진</a> <a href="/tags/엄격-모드/" style="font-size: 10px;">엄격 모드</a> <a href="/tags/유닛-테스트/" style="font-size: 10px;">유닛 테스트</a> <a href="/tags/자바스트립트/" style="font-size: 15px;">자바스트립트</a> <a href="/tags/타입스크립트/" style="font-size: 10px;">타입스크립트</a> <a href="/tags/파이어베이스/" style="font-size: 10px;">파이어베이스</a> <a href="/tags/파이어스토어/" style="font-size: 10px;">파이어스토어</a> <a href="/tags/프로그래밍/" style="font-size: 10px;">프로그래밍</a> <a href="/tags/호이스팅/" style="font-size: 10px;">호이스팅</a>
+        <a href="/tags/App-Engine/" style="font-size: 15px;">App Engine</a> <a href="/tags/ECMAScript/" style="font-size: 20px;">ECMAScript</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Firebase/" style="font-size: 10px;">Firebase</a> <a href="/tags/Firestore/" style="font-size: 10px;">Firestore</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 10px;">Google Cloud Platform</a> <a href="/tags/Hoisting/" style="font-size: 10px;">Hoisting</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unit-test/" style="font-size: 10px;">Unit test</a> <a href="/tags/appengine/" style="font-size: 10px;">appengine</a> <a href="/tags/datastore/" style="font-size: 10px;">datastore</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/google-cloud-platform/" style="font-size: 15px;">google cloud platform</a> <a href="/tags/jest/" style="font-size: 10px;">jest</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/npm-패키지/" style="font-size: 10px;">npm 패키지</a> <a href="/tags/npm-퍼블리싱/" style="font-size: 10px;">npm 퍼블리싱</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-js/" style="font-size: 10px;">vue.js</a> <a href="/tags/개발자-구인시장/" style="font-size: 10px;">개발자 구인시장</a> <a href="/tags/개발자-구직시장/" style="font-size: 10px;">개발자 구직시장</a> <a href="/tags/구글-앱-엔진/" style="font-size: 15px;">구글 앱 엔진</a> <a href="/tags/구글-클라우드-플랫폼/" style="font-size: 15px;">구글 클라우드 플랫폼</a> <a href="/tags/삽질/" style="font-size: 10px;">삽질</a> <a href="/tags/앱엔진/" style="font-size: 15px;">앱엔진</a> <a href="/tags/엄격-모드/" style="font-size: 10px;">엄격 모드</a> <a href="/tags/유닛-테스트/" style="font-size: 10px;">유닛 테스트</a> <a href="/tags/자바스트립트/" style="font-size: 20px;">자바스트립트</a> <a href="/tags/코딩테스트/" style="font-size: 10px;">코딩테스트</a> <a href="/tags/타입스크립트/" style="font-size: 10px;">타입스크립트</a> <a href="/tags/파이어베이스/" style="font-size: 10px;">파이어베이스</a> <a href="/tags/파이어스토어/" style="font-size: 10px;">파이어스토어</a> <a href="/tags/프로그래밍/" style="font-size: 10px;">프로그래밍</a> <a href="/tags/호이스팅/" style="font-size: 10px;">호이스팅</a>
     </div>
 </div>
 
@@ -513,6 +597,17 @@
             아카이브
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/06/">

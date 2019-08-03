@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dev.wisedog.net/"/>
-  <updated>2019-06-18T14:25:31.840Z</updated>
+  <updated>2019-08-03T14:24:50.893Z</updated>
   <id>http://dev.wisedog.net/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>코딜리티(Codility) 첫 경험 - 데모 문제 1번</title>
+    <link href="http://dev.wisedog.net/2019/08/03/%EC%BD%94%EB%94%9C%EB%A6%AC%ED%8B%B0-Codility-%EC%B2%AB-%EA%B2%BD%ED%97%98-%EB%8D%B0%EB%AA%A8-%EB%AC%B8%EC%A0%9C-1%EB%B2%88/"/>
+    <id>http://dev.wisedog.net/2019/08/03/코딜리티-Codility-첫-경험-데모-문제-1번/</id>
+    <published>2019-08-03T13:59:50.000Z</published>
+    <updated>2019-08-03T14:24:50.893Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#xAC1C;&amp;#xC778;&amp;#xC801;&amp;#xC73C;&amp;#xB85C; &amp;#xCF54;&amp;#xB529;&amp;#xD14C;&amp;#xC2A4;&amp;#xD2B8;&amp;#xC5D0; &amp;#xB300;&amp;#xD55C;
+        
+      
+    
+    </summary>
+    
+      <category term="programming" scheme="http://dev.wisedog.net/categories/programming/"/>
+    
+      <category term="javascript" scheme="http://dev.wisedog.net/categories/programming/javascript/"/>
+    
+    
+      <category term="Javascript" scheme="http://dev.wisedog.net/tags/Javascript/"/>
+    
+      <category term="ECMAScript" scheme="http://dev.wisedog.net/tags/ECMAScript/"/>
+    
+      <category term="자바스트립트" scheme="http://dev.wisedog.net/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%8A%B8%EB%A6%BD%ED%8A%B8/"/>
+    
+      <category term="코딩테스트" scheme="http://dev.wisedog.net/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>타입스크립트 전면 도입기</title>
