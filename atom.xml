@@ -292,9 +292,9 @@
     
       <category term="ECMAScript" scheme="http://dev.wisedog.net/tags/ECMAScript/"/>
     
-      <category term="자바스트립트" scheme="http://dev.wisedog.net/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%8A%B8%EB%A6%BD%ED%8A%B8/"/>
-    
       <category term="use strict" scheme="http://dev.wisedog.net/tags/use-strict/"/>
+    
+      <category term="자바스트립트" scheme="http://dev.wisedog.net/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%8A%B8%EB%A6%BD%ED%8A%B8/"/>
     
       <category term="엄격 모드" scheme="http://dev.wisedog.net/tags/%EC%97%84%EA%B2%A9-%EB%AA%A8%EB%93%9C/"/>
     
@@ -328,9 +328,9 @@
     
       <category term="ECMAScript" scheme="http://dev.wisedog.net/tags/ECMAScript/"/>
     
-      <category term="Hoisting" scheme="http://dev.wisedog.net/tags/Hoisting/"/>
-    
       <category term="자바스트립트" scheme="http://dev.wisedog.net/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%8A%B8%EB%A6%BD%ED%8A%B8/"/>
+    
+      <category term="Hoisting" scheme="http://dev.wisedog.net/tags/Hoisting/"/>
     
       <category term="호이스팅" scheme="http://dev.wisedog.net/tags/%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85/"/>
     
