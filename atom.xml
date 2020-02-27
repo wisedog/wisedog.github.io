@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dev.wisedog.net/"/>
-  <updated>2019-08-03T14:24:50.893Z</updated>
+  <updated>2020-02-27T02:58:50.912Z</updated>
   <id>http://dev.wisedog.net/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>에이팀벤쳐스 (개발팀)에 대한 오해</title>
+    <link href="http://dev.wisedog.net/2020/02/27/%EC%97%90%EC%9D%B4%ED%8C%80%EB%B2%A4%EC%B3%90%EC%8A%A4-%EA%B0%9C%EB%B0%9C%ED%8C%80%EC%97%90-%EB%8C%80%ED%95%9C-%EC%98%A4%ED%95%B4/"/>
+    <id>http://dev.wisedog.net/2020/02/27/에이팀벤쳐스-개발팀에-대한-오해/</id>
+    <published>2020-02-27T02:31:53.000Z</published>
+    <updated>2020-02-27T02:58:50.912Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;#xC7A1; &amp;#xD50C;&amp;#xB798;&amp;#xB2DB;&amp;#xC5D0; &amp;#xC62C;&amp;#xB77C;&amp;#xC628; &amp;#xC5D0;&amp;#xC774;&amp;#xD300;&amp;#xBCA4;&amp;#xCCD0;&amp;#xC2A4;&amp;#xC5D0;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="에이팀벤쳐스" scheme="http://dev.wisedog.net/tags/%EC%97%90%EC%9D%B4%ED%8C%80%EB%B2%A4%EC%B3%90%EC%8A%A4/"/>
+    
+      <category term="에이팀벤쳐스 근무환경" scheme="http://dev.wisedog.net/tags/%EC%97%90%EC%9D%B4%ED%8C%80%EB%B2%A4%EC%B3%90%EC%8A%A4-%EA%B7%BC%EB%AC%B4%ED%99%98%EA%B2%BD/"/>
+    
+      <category term="에이팀벤쳐스 잡플래닛" scheme="http://dev.wisedog.net/tags/%EC%97%90%EC%9D%B4%ED%8C%80%EB%B2%A4%EC%B3%90%EC%8A%A4-%EC%9E%A1%ED%94%8C%EB%9E%98%EB%8B%9B/"/>
+    
+  </entry>
   
   <entry>
     <title>코딜리티(Codility) 첫 경험 - 데모 문제 1번</title>
@@ -292,9 +320,9 @@
     
       <category term="ECMAScript" scheme="http://dev.wisedog.net/tags/ECMAScript/"/>
     
-      <category term="use strict" scheme="http://dev.wisedog.net/tags/use-strict/"/>
-    
       <category term="자바스트립트" scheme="http://dev.wisedog.net/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%8A%B8%EB%A6%BD%ED%8A%B8/"/>
+    
+      <category term="use strict" scheme="http://dev.wisedog.net/tags/use-strict/"/>
     
       <category term="엄격 모드" scheme="http://dev.wisedog.net/tags/%EC%97%84%EA%B2%A9-%EB%AA%A8%EB%93%9C/"/>
     
@@ -328,9 +356,9 @@
     
       <category term="ECMAScript" scheme="http://dev.wisedog.net/tags/ECMAScript/"/>
     
-      <category term="자바스트립트" scheme="http://dev.wisedog.net/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%8A%B8%EB%A6%BD%ED%8A%B8/"/>
-    
       <category term="Hoisting" scheme="http://dev.wisedog.net/tags/Hoisting/"/>
+    
+      <category term="자바스트립트" scheme="http://dev.wisedog.net/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%8A%B8%EB%A6%BD%ED%8A%B8/"/>
     
       <category term="호이스팅" scheme="http://dev.wisedog.net/tags/%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85/"/>
     
