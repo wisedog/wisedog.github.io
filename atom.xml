@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dev.wisedog.net/"/>
-  <updated>2020-02-28T02:03:05.691Z</updated>
+  <updated>2020-03-13T03:02:12.032Z</updated>
   <id>http://dev.wisedog.net/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>같은 VPC인데도 EKS에서 RDS 연결 안될 경우</title>
+    <link href="http://dev.wisedog.net/2020/03/13/%EA%B0%99%EC%9D%80-VPC%EC%9D%B8%EB%8D%B0%EB%8F%84-EKS%EC%97%90%EC%84%9C-RDS-%EC%97%B0%EA%B2%B0-%EC%95%88%EB%90%A0-%EA%B2%BD%EC%9A%B0/"/>
+    <id>http://dev.wisedog.net/2020/03/13/같은-VPC인데도-EKS에서-RDS-연결-안될-경우/</id>
+    <published>2020-03-13T03:01:13.000Z</published>
+    <updated>2020-03-13T03:02:12.032Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;AWS&amp;#xC758; Kubernetes &amp;#xC11C;&amp;#xBE44;&amp;#xC2A4;&amp;#xC778; EKS&amp;#xB97C; &amp;#xAD6C;&amp;#xC131;&amp;#xD560;&amp;#xB54C; &amp;#xACAA;&amp;#xC5C8;&amp;#xB358;
+        
+      
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://dev.wisedog.net/categories/AWS/"/>
+    
+    
+      <category term="EKS" scheme="http://dev.wisedog.net/tags/EKS/"/>
+    
+      <category term="AWS" scheme="http://dev.wisedog.net/tags/AWS/"/>
+    
+      <category term="k8s" scheme="http://dev.wisedog.net/tags/k8s/"/>
+    
+      <category term="Kubernetes" scheme="http://dev.wisedog.net/tags/Kubernetes/"/>
+    
+      <category term="RDS" scheme="http://dev.wisedog.net/tags/RDS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>에이팀벤쳐스 (개발팀)에 대한 오해</title>
-    <link href="http://dev.wisedog.net/2020/02/27/%EC%97%90%EC%9D%B4%ED%8C%80%EB%B2%A4%EC%B3%90%EC%8A%A4-%EA%B0%9C%EB%B0%9C%ED%8C%80%EC%97%90-%EB%8C%80%ED%95%9C-%EC%98%A4%ED%95%B4/"/>
-    <id>http://dev.wisedog.net/2020/02/27/에이팀벤쳐스-개발팀에-대한-오해/</id>
+    <link href="http://dev.wisedog.net/2020/02/27/%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%B5%E1%86%B7%E1%84%87%E1%85%A6%E1%86%AB%E1%84%8E%E1%85%A7%E1%84%89%E1%85%B3-%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%90%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%A6-%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AB-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%A2/"/>
+    <id>http://dev.wisedog.net/2020/02/27/에이팀벤쳐스-개발팀에-대한-오해/</id>
     <published>2020-02-27T02:31:53.000Z</published>
-    <updated>2020-02-28T02:03:05.691Z</updated>
+    <updated>2020-02-28T02:03:05.000Z</updated>
     
     <summary type="html">
     
@@ -46,10 +80,10 @@
   
   <entry>
     <title>코딜리티(Codility) 첫 경험 - 데모 문제 1번</title>
-    <link href="http://dev.wisedog.net/2019/08/03/%EC%BD%94%EB%94%9C%EB%A6%AC%ED%8B%B0-Codility-%EC%B2%AB-%EA%B2%BD%ED%97%98-%EB%8D%B0%EB%AA%A8-%EB%AC%B8%EC%A0%9C-1%EB%B2%88/"/>
-    <id>http://dev.wisedog.net/2019/08/03/코딜리티-Codility-첫-경험-데모-문제-1번/</id>
+    <link href="http://dev.wisedog.net/2019/08/03/%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B5%E1%86%AF%E1%84%85%E1%85%B5%E1%84%90%E1%85%B5-Codility-%E1%84%8E%E1%85%A5%E1%86%BA-%E1%84%80%E1%85%A7%E1%86%BC%E1%84%92%E1%85%A5%E1%86%B7-%E1%84%83%E1%85%A6%E1%84%86%E1%85%A9-%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A6-1%E1%84%87%E1%85%A5%E1%86%AB/"/>
+    <id>http://dev.wisedog.net/2019/08/03/코딜리티-Codility-첫-경험-데모-문제-1번/</id>
     <published>2019-08-03T13:59:50.000Z</published>
-    <updated>2019-08-03T14:24:50.893Z</updated>
+    <updated>2019-08-03T14:24:50.000Z</updated>
     
     <summary type="html">
     
@@ -80,10 +114,10 @@
   
   <entry>
     <title>타입스크립트 전면 도입기</title>
-    <link href="http://dev.wisedog.net/2019/06/18/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A0%84%EB%A9%B4-%EB%8F%84%EC%9E%85%EA%B8%B0/"/>
-    <id>http://dev.wisedog.net/2019/06/18/타입스크립트-전면-도입기/</id>
+    <link href="http://dev.wisedog.net/2019/06/18/%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3-%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%86%E1%85%A7%E1%86%AB-%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%80%E1%85%B5/"/>
+    <id>http://dev.wisedog.net/2019/06/18/타입스크립트-전면-도입기/</id>
     <published>2019-06-18T12:53:11.000Z</published>
-    <updated>2019-06-18T14:25:31.840Z</updated>
+    <updated>2019-06-18T14:25:31.000Z</updated>
     
     <summary type="html">
     
@@ -119,7 +153,7 @@
     <link href="http://dev.wisedog.net/2019/05/13/korean-developer-job-distribution/"/>
     <id>http://dev.wisedog.net/2019/05/13/korean-developer-job-distribution/</id>
     <published>2019-05-13T13:04:05.000Z</published>
-    <updated>2019-05-13T13:34:05.896Z</updated>
+    <updated>2019-05-13T13:34:05.000Z</updated>
     
     <summary type="html">
     
@@ -147,7 +181,7 @@
     <link href="http://dev.wisedog.net/2019/04/14/do-not-believe-korean-firebase-docs/"/>
     <id>http://dev.wisedog.net/2019/04/14/do-not-believe-korean-firebase-docs/</id>
     <published>2019-04-14T04:53:03.000Z</published>
-    <updated>2019-04-14T01:18:57.107Z</updated>
+    <updated>2019-04-14T01:18:57.000Z</updated>
     
     <summary type="html">
     
@@ -183,7 +217,7 @@
     <link href="http://dev.wisedog.net/2019/02/04/publish-vue-package/"/>
     <id>http://dev.wisedog.net/2019/02/04/publish-vue-package/</id>
     <published>2019-02-04T05:12:29.000Z</published>
-    <updated>2019-04-14T01:18:41.673Z</updated>
+    <updated>2019-04-14T01:18:41.000Z</updated>
     
     <summary type="html">
     
@@ -221,7 +255,7 @@
     <link href="http://dev.wisedog.net/2018/12/29/google-app-engine-python3-pros-cons/"/>
     <id>http://dev.wisedog.net/2018/12/29/google-app-engine-python3-pros-cons/</id>
     <published>2018-12-29T11:43:56.000Z</published>
-    <updated>2019-04-14T01:18:20.820Z</updated>
+    <updated>2019-04-14T01:18:20.000Z</updated>
     
     <summary type="html">
     
@@ -259,7 +293,7 @@
     <link href="http://dev.wisedog.net/2018/12/15/Google-AppEngine-news-2018-half-later/"/>
     <id>http://dev.wisedog.net/2018/12/15/Google-AppEngine-news-2018-half-later/</id>
     <published>2018-12-15T01:43:56.000Z</published>
-    <updated>2019-05-10T13:22:53.265Z</updated>
+    <updated>2019-05-10T13:22:53.000Z</updated>
     
     <summary type="html">
     
@@ -294,10 +328,10 @@
   
   <entry>
     <title>ECMAScript use strict 사용하기</title>
-    <link href="http://dev.wisedog.net/2018/05/24/ECMAScript-use-strict-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/"/>
-    <id>http://dev.wisedog.net/2018/05/24/ECMAScript-use-strict-사용하기/</id>
+    <link href="http://dev.wisedog.net/2018/05/24/ECMAScript-use-strict-%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5/"/>
+    <id>http://dev.wisedog.net/2018/05/24/ECMAScript-use-strict-사용하기/</id>
     <published>2018-05-24T12:08:19.000Z</published>
-    <updated>2019-02-01T14:09:40.358Z</updated>
+    <updated>2019-02-01T14:09:40.000Z</updated>
     
     <summary type="html">
     
@@ -333,7 +367,7 @@
     <link href="http://dev.wisedog.net/2018/05/19/About-ECMAScript-Hoisting/"/>
     <id>http://dev.wisedog.net/2018/05/19/About-ECMAScript-Hoisting/</id>
     <published>2018-05-19T09:03:26.000Z</published>
-    <updated>2019-02-01T14:09:40.345Z</updated>
+    <updated>2019-02-01T14:09:40.000Z</updated>
     
     <summary type="html">
     
@@ -369,7 +403,7 @@
     <link href="http://dev.wisedog.net/2018/04/22/introduce-google-cloud-app-engine-1/"/>
     <id>http://dev.wisedog.net/2018/04/22/introduce-google-cloud-app-engine-1/</id>
     <published>2018-04-22T05:47:00.000Z</published>
-    <updated>2019-02-01T14:09:40.393Z</updated>
+    <updated>2019-02-01T14:09:40.000Z</updated>
     
     <summary type="html">
     
@@ -407,7 +441,7 @@
     <link href="http://dev.wisedog.net/2018/04/04/how-to-use-jest-with-express-js/"/>
     <id>http://dev.wisedog.net/2018/04/04/how-to-use-jest-with-express-js/</id>
     <published>2018-04-04T01:21:16.000Z</published>
-    <updated>2019-02-01T14:09:40.379Z</updated>
+    <updated>2019-02-01T14:09:40.000Z</updated>
     
     <summary type="html">
     
@@ -443,7 +477,7 @@
     <link href="http://dev.wisedog.net/2018/03/28/hello-world/"/>
     <id>http://dev.wisedog.net/2018/03/28/hello-world/</id>
     <published>2018-03-28T14:15:53.000Z</published>
-    <updated>2019-02-01T14:09:40.370Z</updated>
+    <updated>2019-02-01T14:09:40.000Z</updated>
     
     <summary type="html">
     

@@ -9,56 +9,63 @@
 
     <url>
         <loc>http://dev.wisedog.net/categories/programming/golang/</loc>
-        <lastmod>2019-02-01T14:09:40.370Z</lastmod>
+        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://dev.wisedog.net/categories/programming/node/</loc>
-        <lastmod>2019-02-01T14:09:40.379Z</lastmod>
+        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://dev.wisedog.net/categories/programming/javascript/vue-js/</loc>
-        <lastmod>2019-04-14T01:18:41.673Z</lastmod>
+        <lastmod>2019-04-14T01:18:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://dev.wisedog.net/categories/programming/GCP/</loc>
-        <lastmod>2019-04-14T01:18:57.107Z</lastmod>
+        <lastmod>2019-04-14T01:18:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://dev.wisedog.net/categories/cloud/</loc>
-        <lastmod>2019-05-10T13:22:53.265Z</lastmod>
+        <lastmod>2019-05-10T13:22:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://dev.wisedog.net/categories/cloud/GCP/</loc>
-        <lastmod>2019-05-10T13:22:53.265Z</lastmod>
+        <lastmod>2019-05-10T13:22:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://dev.wisedog.net/categories/programming/</loc>
-        <lastmod>2019-08-03T14:24:50.893Z</lastmod>
+        <lastmod>2019-08-03T14:24:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://dev.wisedog.net/categories/programming/javascript/</loc>
-        <lastmod>2019-08-03T14:24:50.893Z</lastmod>
+        <lastmod>2019-08-03T14:24:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/categories/AWS/</loc>
+        <lastmod>2020-03-13T03:02:12.032Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

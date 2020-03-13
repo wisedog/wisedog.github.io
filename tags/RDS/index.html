@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>태그: RDS - Jongha Kim&#39;s Dev story</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="keywords" content="Software Deveopment">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jongha Kim&#39;s Dev story">
+<meta property="og:url" content="http://dev.wisedog.net/tags/RDS/index.html">
+<meta property="og:site_name" content="Jongha Kim&#39;s Dev story">
+<meta property="og:locale" content="ko">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jongha Kim&#39;s Dev story">
+
+
+
+<link rel="alternative" href="/atom.xml" title="Jongha Kim&#39;s Dev story" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116574812-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116574812-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/mylogo.png" alt="Jongha Kim&#39;s Dev story" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">태그</a></li>
+            <li class="is-active"><a href="#" aria-current="page">RDS</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-13T03:01:13.000Z">2020-03-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/AWS/">AWS</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 read (About 463 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/13/같은-VPC인데도-EKS에서-RDS-연결-안될-경우/">같은 VPC인데도 EKS에서 RDS 연결 안될 경우</a>
+            
+        </h1>
+        <div class="content">
+            <p>AWS&#xC758; Kubernetes &#xC11C;&#xBE44;&#xC2A4;&#xC778; EKS&#xB97C; &#xAD6C;&#xC131;&#xD560;&#xB54C; &#xACAA;&#xC5C8;&#xB358; &#xC77C;&#xC774;&#xB2E4;.<br>EKS&#xC640; RDS&#xB97C; &#xAC19;&#xC740; VPC &#xC548;&#xC5D0; &#xB450;&#xC5C8;&#xC74C;&#xC5D0;&#xB3C4; &#xBD88;&#xAD6C;&#xD558;&#xACE0; EKS&#xC5D0;&#xC11C; RDS&#xB85C; &#xC5F0;&#xACB0;&#xC774; &#xB418;&#xC9C0; &#xC54A;&#xACE0; &#xACC4;&#xC18D;&#xD574;&#xC11C; &#xD0C0;&#xC784;&#xC544;&#xC6C3;&#xC5D0;&#xB7EC;&#xB9CC; &#xBC1C;&#xC0DD;&#xD588;&#xB2E4;. </p>
+<p>&#xC774; &#xACBD;&#xC6B0; &#xBA3C;&#xC800; Pod&#xC5D0;&#xC11C; RDS &#xC8FC;&#xC18C;&#xB97C; &#xC778;&#xC9C0;&#xD558;&#xB294;&#xC9C0; &#xBA3C;&#xC800; &#xD655;&#xC778;&#xD588;&#xB2E4;.<br>&#xBA3C;&#xC800; Pod &#xC774;&#xB984; &#xBA3C;&#xC800; &#xD655;&#xC778;</p>
+<figure class="highlight shell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> kubectl get all -n shipda</span></span><br></pre></td></tr></tbody></table></figure>
+<p>&#xD30C;&#xB4DC; &#xC774;&#xB984;&#xC774; <code>pod/shipda-api-v2-79d868d65-2kh4t</code> &#xC774;&#xB77C; &#xD55C;&#xB2E4;&#xBA74; pod&#xC5D0;&#xB2E4; nslookup &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC2E4;&#xD589;&#xC2DC;&#xD0A8;&#xB2E4;. </p>
+<figure class="highlight shell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">$</span><span class="hljs-bash"> kubectl <span class="hljs-built_in">exec</span> -it pod/shipda-api-v2-79d868d65-2kh4t -n shipda nslookup &lt;blahblah&gt;.rds.amazonaws.com</span></span><br><span class="line">Server:		10.100.0.10</span><br><span class="line">Address:	10.100.0.10:53</span><br><span class="line"></span><br><span class="line">Non-authoritative answer:</span><br><span class="line">&lt;blahblah&gt;.rds.amazonaws.com	canonical name = &lt;blahblah&gt;.ap-northeast-2.compute.amazonaws.com</span><br><span class="line">Name:	&lt;blahblah&gt;.ap-northeast-2.compute.amazonaws.com</span><br><span class="line">Address: 111.111.111.111</span><br><span class="line"></span><br><span class="line">Non-authoritative answer:</span><br><span class="line">&lt;blahblah&gt;.rds.amazonaws.com	canonical name = &lt;blahblah&gt;.ap-northeast-2.compute.amazonaws.com</span><br></pre></td></tr></tbody></table></figure>
+<p>DNS &#xB97C; &#xB9AC;&#xC878;&#xBE59; &#xD558;&#xB294;&#xAC78;&#xB85C; &#xBD10;&#xC11C;&#xB294; DNS&#xB294; &#xBB38;&#xC81C; &#xC5C6;&#xB294;&#xAC83; &#xAC19;&#xB2E4;. &#xADF8;&#xB7EC;&#xBA74; &#xC2E4;&#xC81C;&#xB85C; &#xC811;&#xC18D;&#xC774; &#xB418;&#xB294;&#xC9C0; &#xD551;&#xC744; &#xB0A0;&#xB824;&#xBCF8;&#xB2E4;.<br></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ kubectl exec -it pod/shipda-api-v2-79d868d65-2kh4t -n shipda ping &lt;blahblah&gt;.rds.amazonaws.com</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>&#xD551;&#xC774; &#xAC00;&#xC9C0; &#xC54A;&#xC558;&#xB2E4;. &#xD574;&#xACB0; &#xBC29;&#xBC95;&#xC744; &#xD55C;&#xCC38; &#xCC3E;&#xC558;&#xB2E4;. &#xAC19;&#xC740; VPC&#xB77C;&#xC11C; &#xBB38;&#xC81C; &#xC5C6;&#xC744; &#xC904; &#xC54C;&#xC558;&#xB294;&#xB370; &#xB4A4;&#xD1B5;&#xC218; &#xB9DE;&#xC740; &#xAE30;&#xBD84;&#xC774;&#xC5C8;&#xB2E4;. &#xC0AC;&#xC2E4; &#xD504;&#xB85C;&#xB355;&#xC158;&#xC73C;&#xB85C; GCP&#xC640; Azure&#xB294; &#xC37C;&#xC5C8;&#xB294;&#xB370; AWS&#xB294; &#xCC98;&#xC74C;&#xC774;&#xB77C; &#xC880; &#xB354; &#xD5E4;&#xB9F8;&#xC744;&#xC218;&#xB3C4; &#xC788;&#xB2E4;. &#xC0AC;&#xC2E4; &#xC694;&#xC998; &#xD074;&#xB77C;&#xC6B0;&#xB4DC;&#xAC00; &#xB2E4;&#xB4E4; &#xC5C7;&#xBE44;&#xC2B7;&#xD574;&#xC11C; &#xC788;&#xC744;&#xAC70; (&#xAC70;&#xC758;) &#xC788;&#xC5B4;&#xC11C; &#xC801;&#xC751;&#xC5D0;&#xB294; &#xD070; &#xBB38;&#xC81C;&#xB294; &#xC5C6;&#xC9C0;&#xB9CC; &#xC544;&#xB9C8;&#xC874; &#xAC19;&#xC740; &#xACBD;&#xC6B0;&#xC5D4; VPC, Security Group, Subnet, RoutingTable &#xB4F1;&#xC744; &#xC880; &#xB354; &#xC138;&#xBC00;&#xD558;&#xAC8C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xD5E4;&#xB9F8;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xB2E4;. </p>
+<p>&#xACB0;&#xAD6D; &#xD574;&#xACB0;&#xCC45;&#xC740; - </p>
+<p>RDS&#xC758; &#xC2DC;&#xD050;&#xB9AC;&#xD2F0; &#xADF8;&#xB8F9;&#xC5D0; EKS&#xC758; &#xC2DC;&#xD050;&#xB9AC;&#xD2F0; &#xADF8;&#xB8F9;&#xC744; &#xB123;&#xC5B4;&#xC8FC;&#xBA74; &#xD574;&#xACB0;&#xB418;&#xB294; &#xC77C;&#xC774;&#xC5C8;&#xB2E4;.</p>
+<p>&#xBB54;&#xAC00; &#xAD49;&#xC7A5;&#xD788; &#xD5C8;&#xD0C8;&#xD558;&#xB2E4;. &#xCC38;&#xACE0;&#xB85C; &#xB2E4;&#xB978; VPC&#xB77C;&#xBA74; <a href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html" target="_blank" rel="noopener">VPC &#xD53C;&#xC5B4;&#xB9C1;</a>&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/images/profile_small.jpg" alt="Jongha Kim">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Jongha Kim
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        잡탕 소프트웨어 개발자.
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>대한민국</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        14
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        9
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        48
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="/">
+                팔로우</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/wisedog">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/jongha_the_dev">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/AWS/">
+            <span class="level-start">
+                <span class="level-item">AWS</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/cloud/">
+            <span class="level-start">
+                <span class="level-item">cloud</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/cloud/GCP/">
+            <span class="level-start">
+                <span class="level-item">GCP</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/programming/">
+            <span class="level-start">
+                <span class="level-item">programming</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/programming/GCP/">
+            <span class="level-start">
+                <span class="level-item">GCP</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/programming/golang/">
+            <span class="level-start">
+                <span class="level-item">golang</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/programming/javascript/">
+            <span class="level-start">
+                <span class="level-item">javascript</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/programming/node/">
+            <span class="level-start">
+                <span class="level-item">node</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/03/13/같은-VPC인데도-EKS에서-RDS-연결-안될-경우/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="같은 VPC인데도 EKS에서 RDS 연결 안될 경우">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-13T03:01:13.000Z">2020-03-13</time></div>
+                    <a href="/2020/03/13/같은-VPC인데도-EKS에서-RDS-연결-안될-경우/" class="has-link-black-ter is-size-6">같은 VPC인데도 EKS에서 RDS 연결 안될 경우</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/AWS/">AWS</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/27/에이팀벤쳐스-개발팀에-대한-오해/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="에이팀벤쳐스 (개발팀)에 대한 오해">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-27T02:31:53.000Z">2020-02-27</time></div>
+                    <a href="/2020/02/27/에이팀벤쳐스-개발팀에-대한-오해/" class="has-link-black-ter is-size-6">에이팀벤쳐스 (개발팀)에 대한 오해</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/03/코딜리티-Codility-첫-경험-데모-문제-1번/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="코딜리티(Codility) 첫 경험 - 데모 문제 1번">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-03T13:59:50.000Z">2019-08-03</time></div>
+                    <a href="/2019/08/03/코딜리티-Codility-첫-경험-데모-문제-1번/" class="has-link-black-ter is-size-6">코딜리티(Codility) 첫 경험 - 데모 문제 1번</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/programming/">programming</a> / <a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/18/타입스크립트-전면-도입기/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="타입스크립트 전면 도입기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-18T12:53:11.000Z">2019-06-18</time></div>
+                    <a href="/2019/06/18/타입스크립트-전면-도입기/" class="has-link-black-ter is-size-6">타입스크립트 전면 도입기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/programming/">programming</a> / <a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/13/korean-developer-job-distribution/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="현재 개발자 채용 시장에 대한 작은 생각">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:04:05.000Z">2019-05-13</time></div>
+                    <a href="/2019/05/13/korean-developer-job-distribution/" class="has-link-black-ter is-size-6">현재 개발자 채용 시장에 대한 작은 생각</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/App-Engine/" style="font-size: 15px;">App Engine</a> <a href="/tags/ECMAScript/" style="font-size: 20px;">ECMAScript</a> <a href="/tags/EKS/" style="font-size: 10px;">EKS</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Firebase/" style="font-size: 10px;">Firebase</a> <a href="/tags/Firestore/" style="font-size: 10px;">Firestore</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 10px;">Google Cloud Platform</a> <a href="/tags/Hoisting/" style="font-size: 10px;">Hoisting</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Kubernetes/" style="font-size: 10px;">Kubernetes</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/RDS/" style="font-size: 10px;">RDS</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unit-test/" style="font-size: 10px;">Unit test</a> <a href="/tags/appengine/" style="font-size: 10px;">appengine</a> <a href="/tags/datastore/" style="font-size: 10px;">datastore</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/google-cloud-platform/" style="font-size: 15px;">google cloud platform</a> <a href="/tags/jest/" style="font-size: 10px;">jest</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/npm-패키지/" style="font-size: 10px;">npm 패키지</a> <a href="/tags/npm-퍼블리싱/" style="font-size: 10px;">npm 퍼블리싱</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-js/" style="font-size: 10px;">vue.js</a> <a href="/tags/개발자-구인시장/" style="font-size: 10px;">개발자 구인시장</a> <a href="/tags/개발자-구직시장/" style="font-size: 10px;">개발자 구직시장</a> <a href="/tags/구글-앱-엔진/" style="font-size: 15px;">구글 앱 엔진</a> <a href="/tags/구글-클라우드-플랫폼/" style="font-size: 15px;">구글 클라우드 플랫폼</a> <a href="/tags/삽질/" style="font-size: 10px;">삽질</a> <a href="/tags/앱엔진/" style="font-size: 15px;">앱엔진</a> <a href="/tags/엄격-모드/" style="font-size: 10px;">엄격 모드</a> <a href="/tags/에이팀벤쳐스/" style="font-size: 10px;">에이팀벤쳐스</a> <a href="/tags/에이팀벤쳐스-근무환경/" style="font-size: 10px;">에이팀벤쳐스 근무환경</a> <a href="/tags/에이팀벤쳐스-잡플래닛/" style="font-size: 10px;">에이팀벤쳐스 잡플래닛</a> <a href="/tags/유닛-테스트/" style="font-size: 10px;">유닛 테스트</a> <a href="/tags/자바스트립트/" style="font-size: 20px;">자바스트립트</a> <a href="/tags/코딩테스트/" style="font-size: 10px;">코딩테스트</a> <a href="/tags/타입스크립트/" style="font-size: 10px;">타입스크립트</a> <a href="/tags/파이어베이스/" style="font-size: 10px;">파이어베이스</a> <a href="/tags/파이어스토어/" style="font-size: 10px;">파이어스토어</a> <a href="/tags/프로그래밍/" style="font-size: 10px;">프로그래밍</a> <a href="/tags/호이스팅/" style="font-size: 10px;">호이스팅</a>
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">8월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">6월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">12월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">5월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">4월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/mylogo.png" alt="Jongha Kim&#39;s Dev story" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Jongha Kim&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: 'Pages',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
