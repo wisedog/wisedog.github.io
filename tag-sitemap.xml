@@ -31,48 +31,6 @@
     </url>
 
     <url>
-        <loc>http://dev.wisedog.net/tags/Google-Cloud-Platform/</loc>
-        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.wisedog.net/tags/golang/</loc>
-        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.wisedog.net/tags/go/</loc>
-        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.wisedog.net/tags/appengine/</loc>
-        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.wisedog.net/tags/datastore/</loc>
-        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.wisedog.net/tags/%EC%82%BD%EC%A7%88/</loc>
-        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://dev.wisedog.net/tags/Node/</loc>
         <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -102,6 +60,41 @@
 
     <url>
         <loc>http://dev.wisedog.net/tags/%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8/</loc>
+        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/Google-Cloud-Platform/</loc>
+        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/golang/</loc>
+        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/go/</loc>
+        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/appengine/</loc>
+        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/datastore/</loc>
         <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -304,36 +297,57 @@
     </url>
 
     <url>
-        <loc>http://dev.wisedog.net/tags/EKS/</loc>
-        <lastmod>2020-03-13T03:02:12.032Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.wisedog.net/tags/AWS/</loc>
-        <lastmod>2020-03-13T03:02:12.032Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://dev.wisedog.net/tags/k8s/</loc>
-        <lastmod>2020-03-13T03:02:12.032Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://dev.wisedog.net/tags/Kubernetes/</loc>
-        <lastmod>2020-03-13T03:02:12.032Z</lastmod>
+        <lastmod>2020-03-31T01:42:17.538Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://dev.wisedog.net/tags/RDS/</loc>
-        <lastmod>2020-03-13T03:02:12.032Z</lastmod>
+        <lastmod>2020-03-31T01:42:17.538Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/%EC%82%BD%EC%A7%88/</loc>
+        <lastmod>2020-03-31T01:52:27.268Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/Kubernetes/</loc>
+        <lastmod>2020-03-31T01:52:27.268Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/</loc>
+        <lastmod>2020-03-31T01:52:27.268Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/EKS/</loc>
+        <lastmod>2020-03-31T01:52:27.268Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/AWS/</loc>
+        <lastmod>2020-03-31T01:52:27.268Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/tags/Elastic-Kubernetes-Service/</loc>
+        <lastmod>2020-03-31T01:52:27.268Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

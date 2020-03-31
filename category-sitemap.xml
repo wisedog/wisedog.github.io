@@ -8,14 +8,14 @@
     </url>
 
     <url>
-        <loc>http://dev.wisedog.net/categories/programming/golang/</loc>
+        <loc>http://dev.wisedog.net/categories/programming/node/</loc>
         <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://dev.wisedog.net/categories/programming/node/</loc>
+        <loc>http://dev.wisedog.net/categories/programming/golang/</loc>
         <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -65,7 +65,14 @@
 
     <url>
         <loc>http://dev.wisedog.net/categories/AWS/</loc>
-        <lastmod>2020-03-13T03:02:12.032Z</lastmod>
+        <lastmod>2020-03-31T01:52:27.268Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/categories/AWS/k8s/</loc>
+        <lastmod>2020-03-31T01:52:27.268Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

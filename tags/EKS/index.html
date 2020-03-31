@@ -144,6 +144,88 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-30T03:31:38.000Z">2020-03-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/AWS/">AWS</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/AWS/k8s/">k8s</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 read (About 534 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/30/EKS-503-탈출기/">EKS 503 탈출기</a>
+            
+        </h1>
+        <div class="content">
+            <p>EKS&#xB97C; &#xCC98;&#xC74C; &#xAD6C;&#xCD95;&#xD558;&#xACE0; &#xB098;&#xB97C; &#xBC18;&#xACA8;&#xC900; &#xD654;&#xBA74;&#xC740; &#xB2E8;&#xC5F0; 503 Service Unavailable &#xC774;&#xC5C8;&#xB2E4;. &#x3160;&#x3160; &#xBB38;&#xC81C;&#xC758; &#xC6D0;&#xC778;&#xC740; Pod, Service, Ingress &#xD639;&#xC740; &#xC774;&#xBBF8;&#xC9C0; &#xC790;&#xCCB4;&#xC5D0; &#xC788;&#xC744; &#xC218; &#xC788;&#xB2E4;. </p>
+<p>&#xBB38;&#xC81C;&#xC810;&#xC744; &#xCC3E;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xD655;&#xC778;&#xD588;&#xB2E4;.</p>
+<h2 id="Pod&#xAC00;-&#xC815;&#xC0C1;-&#xB3D9;&#xC791;-&#xC911;&#xC778;&#xC9C0;-&#xD655;&#xC778;"><a href="#Pod&#xAC00;-&#xC815;&#xC0C1;-&#xB3D9;&#xC791;-&#xC911;&#xC778;&#xC9C0;-&#xD655;&#xC778;" class="headerlink" title="Pod&#xAC00; &#xC815;&#xC0C1; &#xB3D9;&#xC791; &#xC911;&#xC778;&#xC9C0; &#xD655;&#xC778;"></a>Pod&#xAC00; &#xC815;&#xC0C1; &#xB3D9;&#xC791; &#xC911;&#xC778;&#xC9C0; &#xD655;&#xC778;</h2><p>&#xBA3C;&#xC800; pod&#xAC00; &#xB3D9;&#xC791; &#xC911;&#xC778;&#xC9C0; &#xD655;&#xC778;&#xD55C;&#xB2E4;.</p>
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ kubectl get pods</span><br><span class="line">NAME                             READY   STATUS    RESTARTS   AGE</span><br><span class="line">shipda-api-v2-7b45cdf6df-7hfsk   1/1     Running   0          2d12h</span><br><span class="line">shipda-api-v2-7b45cdf6df-b8hzq   1/1     Running   0          2d12h</span><br><span class="line">shipda-api-v2-7b45cdf6df-v24vh   1/1     Running   0          2d12h</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xBB50; &#xB2E4;&#xB4E4; &#xC815;&#xC0C1; &#xB3D9;&#xC791;&#xC911;&#xC774;&#xB2C8; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xD655;&#xC778;&#xD574;&#xBCF8;&#xB2E4;.</p>
+<h2 id="&#xC774;&#xBBF8;&#xC9C0;-&#xAC80;&#xC0AC;"><a href="#&#xC774;&#xBBF8;&#xC9C0;-&#xAC80;&#xC0AC;" class="headerlink" title="&#xC774;&#xBBF8;&#xC9C0; &#xAC80;&#xC0AC;"></a>&#xC774;&#xBBF8;&#xC9C0; &#xAC80;&#xC0AC;</h2><p>Pod&#xC5D0; &#xC62C;&#xB77C;&#xAC04; &#xB3C4;&#xCEE4; &#xC774;&#xBBF8;&#xC9C0;&#xAC00; &#xC9C4;&#xC9DC;&#xB85C; &#xC81C;&#xB300;&#xB85C; &#xB3C4;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD574;&#xBCF8;&#xB2E4;. &#xB2E4;&#xB9CC; &#xC774;&#xB294; Health Check&#xB97C; &#xC798; &#xB9CC;&#xB4E4;&#xC5B4;&#xB1A8;&#xB2E4;&#xBA74; &#xC880; &#xC27D;&#xAC8C; &#xCCB4;&#xD06C;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl port-forward pod/shipda-api-v2-7b45cdf6df-7hfsk 8080:8080</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xD574;&#xB2F9; Pod&#xC758; 8080&#xD3EC;&#xD2B8;&#xB97C; localhost 8080 &#xD3EC;&#xD2B8;&#xC5D0; &#xBC14;&#xC778;&#xB529;&#xC2DC;&#xD0A8;&#xB2E4;. &#xADF8; &#xD6C4; &#xB85C;&#xCEEC;&#xD638;&#xC2A4;&#xD2B8;&#xC758; 8080&#xD3EC;&#xD2B8;&#xC5D0; &#xB300;&#xACE0; API&#xB97C; &#xD14C;&#xC2A4;&#xD2B8;&#xD574;&#xBCF8;&#xB2E4;.</p>
+<p>&#xC5EC;&#xAE30;&#xAE4C;&#xC9C0; &#xBB38;&#xC81C;&#xAC00; &#xC5C6;&#xC73C;&#xBA74; Service &#xD639;&#xC740; Ingress&#xAC00; &#xBB38;&#xC81C;&#xB2E4;.</p>
+<h2 id="&#xC11C;&#xBE44;&#xC2A4;"><a href="#&#xC11C;&#xBE44;&#xC2A4;" class="headerlink" title="&#xC11C;&#xBE44;&#xC2A4;"></a>&#xC11C;&#xBE44;&#xC2A4;</h2><p>&#xC6D0;&#xC778;&#xC740;</p>
+<ol>
+<li>&#xC778;&#xADF8;&#xB808;&#xC2A4;&#xAC00; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xBABB;&#xCC3E;&#xAC70;&#xB098;</li>
+<li>&#xC11C;&#xBE44;&#xC2A4;&#xAC00; Deployment &#xB97C; &#xBABB;&#xCC3E;&#xAC70;&#xB098;</li>
+</ol>
+<p>&#xC774; &#xB458; &#xC911; &#xD558;&#xB098;&#xB85C; &#xC881;&#xD600;&#xC84C;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC5B4;&#xB514;&#xC11C; &#xBB38;&#xC81C;&#xC778;&#xC9C0; &#xB3C4;&#xD1B5; &#xC54C; &#xC218;&#xAC00; &#xC5C6;&#xC5C8;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xC606;&#xC5D0; &#xACF0;&#xB3CC;&#xC774;&#xB97C; &#xC549;&#xD600;&#xB193;&#xACE0; &#xB2E4;&#xC2DC; &#xD55C; &#xBC88; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xD655;&#xC778;&#xD574;&#xBCF8;&#xB2E4;. </p>
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ kubectl describe service -n shipda</span><br><span class="line">Name:                     shipda-api-v2</span><br><span class="line">Namespace:                shipda</span><br><span class="line">Labels:                   &lt;none&gt;</span><br><span class="line">Annotations:              kubectl.kubernetes.io/</span><br><span class="line">Selector:                 run=shipda-api-v2</span><br><span class="line">Type:                     NodePort</span><br><span class="line">IP:                       10.100.75.73</span><br><span class="line">Port:                     &lt;unset&gt;  80/TCP</span><br><span class="line">TargetPort:               8080/TCP</span><br><span class="line">NodePort:                 &lt;unset&gt;  30888/TCP</span><br><span class="line">Endpoints:                172.31.1.205:8080,172.31.21.125:8080,172.31.39.55:8080</span><br><span class="line">Session Affinity:         None</span><br><span class="line">External Traffic Policy:  Cluster</span><br><span class="line">Events:                   &lt;none&gt;</span><br></pre></td></tr></tbody></table></figure>
+<p>deployment&#xB294;<br></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: apps/v1</span><br><span class="line">kind: Deployment</span><br><span class="line">metadata:</span><br><span class="line">  name: shipda-api-v2</span><br><span class="line">  labels:</span><br><span class="line">    app: shipda-api-v2</span><br><span class="line">  namespace: shipda</span><br><span class="line">spec:</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>&#xACF0;&#xB3CC;&#xC774;&#xC5D0;&#xAC8C; deployment&#xC758; metadata&#xB97C; &#xC124;&#xBA85;&#xD558;&#xB2E4;&#xAC00; &#xAC11;&#xC790;&#xAE30; &#xB728;&#xC5BD;!<br>Deployment&#xC5D0;&#xC11C;&#xB294; label&#xC744; <code>app: shipda-api-v2</code> &#xB85C; &#xD574;&#xB1A8;&#xB294;&#xB370; Service Selector&#xB294; <code>run: shipda-api-v2</code> &#xB85C; &#xD574;&#xB193;&#xC558;&#xB358; &#xAC83;&#xC774;&#xC5C8;&#xB2E4;!</p>
+<p>&#xB530;&#xB77C;&#xC11C; </p>
+<p>&#xC789;&#xADF8;&#xB808;&#xC2A4; -&gt; &#xC11C;&#xBE44;&#xC2A4; -&gt; &#xB514;&#xD50C;&#xB85C;&#xC774;&#xBA3C;&#xD2B8; </p>
+<p>&#xC774;&#xB807;&#xAC8C; &#xD758;&#xB7EC;&#xAC00;&#xC57C;&#xD560; &#xD2B8;&#xB798;&#xD53D;&#xC774; &#xC11C;&#xBE44;&#xC2A4;&#xC5D0;&#xC11C; &#xB514;&#xD50C;&#xB85C;&#xC774;&#xBA3C;&#xD2B8;&#xB85C; &#xD758;&#xB7EC;&#xAC00;&#xC9C0; &#xBABB;&#xD574;&#xC11C; 503&#xC5D0;&#xB7EC;&#xAC00; &#xBC1C;&#xC0DD;&#xD588;&#xB2E4;. &#xC65C; selector&#xB97C; run&#xC73C;&#xB85C; &#xD55C;&#xC9C0; &#xC774;&#xC720;&#xB294; &#xBAA8;&#xB974;&#xACA0;&#xC9C0;&#xB9CC;&#x2026; </p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-03-13T03:01:13.000Z">2020-03-13</time>
                 
                 <div class="level-item">
@@ -252,7 +334,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        14
+                        15
                     </p>
                 </div>
             </div>
@@ -262,7 +344,7 @@
                         카테고리
                     </p>
                     <p class="title has-text-weight-normal">
-                        9
+                        10
                     </p>
                 </div>
             </div>
@@ -272,7 +354,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        48
+                        50
                     </p>
                 </div>
             </div>
@@ -324,9 +406,17 @@
                 <span class="level-item">AWS</span>
             </span>
             <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/AWS/k8s/">
+            <span class="level-start">
+                <span class="level-item">k8s</span>
+            </span>
+            <span class="level-end">
                 <span class="level-item tag">1</span>
             </span>
-        </a></li><li>
+        </a></li></ul></li><li>
         <a class="level is-marginless" href="/categories/cloud/">
             <span class="level-start">
                 <span class="level-item">cloud</span>
@@ -394,6 +484,25 @@
         <h3 class="menu-label">
             최근 글
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/03/30/EKS-503-탈출기/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="EKS 503 탈출기">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-30T03:31:38.000Z">2020-03-30</time></div>
+                    <a href="/2020/03/30/EKS-503-탈출기/" class="has-link-black-ter is-size-6">EKS 503 탈출기</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/AWS/">AWS</a> / <a class="has-link-grey -link" href="/categories/AWS/k8s/">k8s</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -471,25 +580,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/05/13/korean-developer-job-distribution/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="현재 개발자 채용 시장에 대한 작은 생각">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-13T13:04:05.000Z">2019-05-13</time></div>
-                    <a href="/2019/05/13/korean-developer-job-distribution/" class="has-link-black-ter is-size-6">현재 개발자 채용 시장에 대한 작은 생각</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -500,7 +590,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/App-Engine/" style="font-size: 15px;">App Engine</a> <a href="/tags/ECMAScript/" style="font-size: 20px;">ECMAScript</a> <a href="/tags/EKS/" style="font-size: 10px;">EKS</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Firebase/" style="font-size: 10px;">Firebase</a> <a href="/tags/Firestore/" style="font-size: 10px;">Firestore</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 10px;">Google Cloud Platform</a> <a href="/tags/Hoisting/" style="font-size: 10px;">Hoisting</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Kubernetes/" style="font-size: 10px;">Kubernetes</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/RDS/" style="font-size: 10px;">RDS</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unit-test/" style="font-size: 10px;">Unit test</a> <a href="/tags/appengine/" style="font-size: 10px;">appengine</a> <a href="/tags/datastore/" style="font-size: 10px;">datastore</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/google-cloud-platform/" style="font-size: 15px;">google cloud platform</a> <a href="/tags/jest/" style="font-size: 10px;">jest</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/npm-패키지/" style="font-size: 10px;">npm 패키지</a> <a href="/tags/npm-퍼블리싱/" style="font-size: 10px;">npm 퍼블리싱</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-js/" style="font-size: 10px;">vue.js</a> <a href="/tags/개발자-구인시장/" style="font-size: 10px;">개발자 구인시장</a> <a href="/tags/개발자-구직시장/" style="font-size: 10px;">개발자 구직시장</a> <a href="/tags/구글-앱-엔진/" style="font-size: 15px;">구글 앱 엔진</a> <a href="/tags/구글-클라우드-플랫폼/" style="font-size: 15px;">구글 클라우드 플랫폼</a> <a href="/tags/삽질/" style="font-size: 10px;">삽질</a> <a href="/tags/앱엔진/" style="font-size: 15px;">앱엔진</a> <a href="/tags/엄격-모드/" style="font-size: 10px;">엄격 모드</a> <a href="/tags/에이팀벤쳐스/" style="font-size: 10px;">에이팀벤쳐스</a> <a href="/tags/에이팀벤쳐스-근무환경/" style="font-size: 10px;">에이팀벤쳐스 근무환경</a> <a href="/tags/에이팀벤쳐스-잡플래닛/" style="font-size: 10px;">에이팀벤쳐스 잡플래닛</a> <a href="/tags/유닛-테스트/" style="font-size: 10px;">유닛 테스트</a> <a href="/tags/자바스트립트/" style="font-size: 20px;">자바스트립트</a> <a href="/tags/코딩테스트/" style="font-size: 10px;">코딩테스트</a> <a href="/tags/타입스크립트/" style="font-size: 10px;">타입스크립트</a> <a href="/tags/파이어베이스/" style="font-size: 10px;">파이어베이스</a> <a href="/tags/파이어스토어/" style="font-size: 10px;">파이어스토어</a> <a href="/tags/프로그래밍/" style="font-size: 10px;">프로그래밍</a> <a href="/tags/호이스팅/" style="font-size: 10px;">호이스팅</a>
+        <a href="/tags/AWS/" style="font-size: 13.33px;">AWS</a> <a href="/tags/App-Engine/" style="font-size: 16.67px;">App Engine</a> <a href="/tags/ECMAScript/" style="font-size: 20px;">ECMAScript</a> <a href="/tags/EKS/" style="font-size: 13.33px;">EKS</a> <a href="/tags/Elastic-Kubernetes-Service/" style="font-size: 10px;">Elastic Kubernetes Service</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Firebase/" style="font-size: 10px;">Firebase</a> <a href="/tags/Firestore/" style="font-size: 10px;">Firestore</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 10px;">Google Cloud Platform</a> <a href="/tags/Hoisting/" style="font-size: 10px;">Hoisting</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Kubernetes/" style="font-size: 13.33px;">Kubernetes</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/RDS/" style="font-size: 10px;">RDS</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unit-test/" style="font-size: 10px;">Unit test</a> <a href="/tags/appengine/" style="font-size: 10px;">appengine</a> <a href="/tags/datastore/" style="font-size: 10px;">datastore</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/google-cloud-platform/" style="font-size: 16.67px;">google cloud platform</a> <a href="/tags/jest/" style="font-size: 10px;">jest</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/npm-패키지/" style="font-size: 10px;">npm 패키지</a> <a href="/tags/npm-퍼블리싱/" style="font-size: 10px;">npm 퍼블리싱</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-js/" style="font-size: 10px;">vue.js</a> <a href="/tags/개발자-구인시장/" style="font-size: 10px;">개발자 구인시장</a> <a href="/tags/개발자-구직시장/" style="font-size: 10px;">개발자 구직시장</a> <a href="/tags/구글-앱-엔진/" style="font-size: 16.67px;">구글 앱 엔진</a> <a href="/tags/구글-클라우드-플랫폼/" style="font-size: 16.67px;">구글 클라우드 플랫폼</a> <a href="/tags/삽질/" style="font-size: 16.67px;">삽질</a> <a href="/tags/앱엔진/" style="font-size: 16.67px;">앱엔진</a> <a href="/tags/엄격-모드/" style="font-size: 10px;">엄격 모드</a> <a href="/tags/에이팀벤쳐스/" style="font-size: 10px;">에이팀벤쳐스</a> <a href="/tags/에이팀벤쳐스-근무환경/" style="font-size: 10px;">에이팀벤쳐스 근무환경</a> <a href="/tags/에이팀벤쳐스-잡플래닛/" style="font-size: 10px;">에이팀벤쳐스 잡플래닛</a> <a href="/tags/유닛-테스트/" style="font-size: 10px;">유닛 테스트</a> <a href="/tags/자바스트립트/" style="font-size: 20px;">자바스트립트</a> <a href="/tags/코딩테스트/" style="font-size: 10px;">코딩테스트</a> <a href="/tags/쿠버네티스/" style="font-size: 10px;">쿠버네티스</a> <a href="/tags/타입스크립트/" style="font-size: 10px;">타입스크립트</a> <a href="/tags/파이어베이스/" style="font-size: 10px;">파이어베이스</a> <a href="/tags/파이어스토어/" style="font-size: 10px;">파이어스토어</a> <a href="/tags/프로그래밍/" style="font-size: 10px;">프로그래밍</a> <a href="/tags/호이스팅/" style="font-size: 10px;">호이스팅</a>
     </div>
 </div>
 
@@ -519,7 +609,7 @@
                     <span class="level-item">3월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>

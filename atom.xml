@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dev.wisedog.net/"/>
-  <updated>2020-03-13T03:02:12.032Z</updated>
+  <updated>2020-03-31T01:52:27.268Z</updated>
   <id>http://dev.wisedog.net/</id>
   
   <author>
@@ -17,11 +17,49 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>EKS 503 탈출기</title>
+    <link href="http://dev.wisedog.net/2020/03/30/EKS-503-%ED%83%88%EC%B6%9C%EA%B8%B0/"/>
+    <id>http://dev.wisedog.net/2020/03/30/EKS-503-탈출기/</id>
+    <published>2020-03-30T03:31:38.000Z</published>
+    <updated>2020-03-31T01:52:27.268Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;EKS&amp;#xB97C; &amp;#xCC98;&amp;#xC74C; &amp;#xAD6C;&amp;#xCD95;&amp;#xD558;&amp;#xACE0; &amp;#xB098;&amp;#xB97C; &amp;#xBC18;&amp;#xACA8;&amp;#xC900; &amp;#xD654;&amp;#xBA74;&amp;#xC740;
+        
+      
+    
+    </summary>
+    
+      <category term="AWS" scheme="http://dev.wisedog.net/categories/AWS/"/>
+    
+      <category term="k8s" scheme="http://dev.wisedog.net/categories/AWS/k8s/"/>
+    
+    
+      <category term="삽질" scheme="http://dev.wisedog.net/tags/%EC%82%BD%EC%A7%88/"/>
+    
+      <category term="Kubernetes" scheme="http://dev.wisedog.net/tags/Kubernetes/"/>
+    
+      <category term="쿠버네티스" scheme="http://dev.wisedog.net/tags/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/"/>
+    
+      <category term="EKS" scheme="http://dev.wisedog.net/tags/EKS/"/>
+    
+      <category term="AWS" scheme="http://dev.wisedog.net/tags/AWS/"/>
+    
+      <category term="Elastic Kubernetes Service" scheme="http://dev.wisedog.net/tags/Elastic-Kubernetes-Service/"/>
+    
+  </entry>
+  
+  <entry>
     <title>같은 VPC인데도 EKS에서 RDS 연결 안될 경우</title>
     <link href="http://dev.wisedog.net/2020/03/13/%EA%B0%99%EC%9D%80-VPC%EC%9D%B8%EB%8D%B0%EB%8F%84-EKS%EC%97%90%EC%84%9C-RDS-%EC%97%B0%EA%B2%B0-%EC%95%88%EB%90%A0-%EA%B2%BD%EC%9A%B0/"/>
     <id>http://dev.wisedog.net/2020/03/13/같은-VPC인데도-EKS에서-RDS-연결-안될-경우/</id>
     <published>2020-03-13T03:01:13.000Z</published>
-    <updated>2020-03-13T03:02:12.032Z</updated>
+    <updated>2020-03-31T01:42:17.538Z</updated>
     
     <summary type="html">
     
@@ -38,13 +76,15 @@
       <category term="AWS" scheme="http://dev.wisedog.net/categories/AWS/"/>
     
     
+      <category term="삽질" scheme="http://dev.wisedog.net/tags/%EC%82%BD%EC%A7%88/"/>
+    
+      <category term="Kubernetes" scheme="http://dev.wisedog.net/tags/Kubernetes/"/>
+    
       <category term="EKS" scheme="http://dev.wisedog.net/tags/EKS/"/>
     
       <category term="AWS" scheme="http://dev.wisedog.net/tags/AWS/"/>
     
       <category term="k8s" scheme="http://dev.wisedog.net/tags/k8s/"/>
-    
-      <category term="Kubernetes" scheme="http://dev.wisedog.net/tags/Kubernetes/"/>
     
       <category term="RDS" scheme="http://dev.wisedog.net/tags/RDS/"/>
     
