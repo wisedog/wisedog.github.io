@@ -55,7 +55,7 @@
     <link href="http://dev.wisedog.net/2020/04/18/%EC%99%B8%EC%A3%BC-%EB%A0%88%EA%B1%B0%EC%8B%9C%EB%A1%9C%EB%B6%80%ED%84%B0%EC%9D%98-%EC%97%AC%EC%A0%95-1%ED%8E%B8/"/>
     <id>http://dev.wisedog.net/2020/04/18/외주-레거시로부터의-여정-1편/</id>
     <published>2020-04-18T01:59:27.000Z</published>
-    <updated>2020-04-18T09:26:12.373Z</updated>
+    <updated>2020-04-19T08:40:11.935Z</updated>
     
     <summary type="html">
     
@@ -242,15 +242,15 @@
       <category term="javascript" scheme="http://dev.wisedog.net/categories/programming/javascript/"/>
     
     
-      <category term="타입스크립트" scheme="http://dev.wisedog.net/tags/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/"/>
-    
-      <category term="Typescript" scheme="http://dev.wisedog.net/tags/Typescript/"/>
-    
       <category term="Javascript" scheme="http://dev.wisedog.net/tags/Javascript/"/>
     
       <category term="ECMAScript" scheme="http://dev.wisedog.net/tags/ECMAScript/"/>
     
       <category term="자바스트립트" scheme="http://dev.wisedog.net/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%8A%B8%EB%A6%BD%ED%8A%B8/"/>
+    
+      <category term="타입스크립트" scheme="http://dev.wisedog.net/tags/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/"/>
+    
+      <category term="Typescript" scheme="http://dev.wisedog.net/tags/Typescript/"/>
     
   </entry>
   
@@ -602,9 +602,9 @@
       <category term="golang" scheme="http://dev.wisedog.net/categories/programming/golang/"/>
     
     
-      <category term="GCP" scheme="http://dev.wisedog.net/tags/GCP/"/>
-    
       <category term="삽질" scheme="http://dev.wisedog.net/tags/%EC%82%BD%EC%A7%88/"/>
+    
+      <category term="GCP" scheme="http://dev.wisedog.net/tags/GCP/"/>
     
       <category term="Google Cloud Platform" scheme="http://dev.wisedog.net/tags/Google-Cloud-Platform/"/>
     
