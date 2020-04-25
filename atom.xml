@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dev.wisedog.net/"/>
-  <updated>2020-04-25T12:52:16.564Z</updated>
+  <updated>2020-04-25T22:34:02.340Z</updated>
   <id>http://dev.wisedog.net/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>외주 레거시로부터의 여정 3편 - API 개편</title>
-    <link href="http://dev.wisedog.net/2020/04/20/%EC%99%B8%EC%A3%BC-%EB%A0%88%EA%B1%B0%EC%8B%9C%EB%A1%9C%EB%B6%80%ED%84%B0%EC%9D%98-%EC%97%AC%EC%A0%95-3%ED%8E%B8/"/>
-    <id>http://dev.wisedog.net/2020/04/20/외주-레거시로부터의-여정-3편/</id>
-    <published>2020-04-20T06:20:23.000Z</published>
-    <updated>2020-04-25T12:52:16.564Z</updated>
+    <link href="http://dev.wisedog.net/2020/04/25/%EC%99%B8%EC%A3%BC-%EB%A0%88%EA%B1%B0%EC%8B%9C%EB%A1%9C%EB%B6%80%ED%84%B0%EC%9D%98-%EC%97%AC%EC%A0%95-3%ED%8E%B8/"/>
+    <id>http://dev.wisedog.net/2020/04/25/외주-레거시로부터의-여정-3편/</id>
+    <published>2020-04-25T06:20:23.000Z</published>
+    <updated>2020-04-25T22:34:02.340Z</updated>
     
     <summary type="html">
     
@@ -40,17 +40,17 @@
       <category term="일반" scheme="http://dev.wisedog.net/categories/%EA%B0%9C%EB%B0%9C%EC%9D%BC%EA%B8%B0/%EC%9D%BC%EB%B0%98/"/>
     
     
-      <category term="프로그래밍" scheme="http://dev.wisedog.net/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/"/>
-    
-      <category term="외주" scheme="http://dev.wisedog.net/tags/%EC%99%B8%EC%A3%BC/"/>
-    
-      <category term="레거시" scheme="http://dev.wisedog.net/tags/%EB%A0%88%EA%B1%B0%EC%8B%9C/"/>
-    
       <category term="Express" scheme="http://dev.wisedog.net/tags/Express/"/>
+    
+      <category term="프로그래밍" scheme="http://dev.wisedog.net/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/"/>
     
       <category term="Typescript" scheme="http://dev.wisedog.net/tags/Typescript/"/>
     
       <category term="타입스크립트" scheme="http://dev.wisedog.net/tags/%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/"/>
+    
+      <category term="외주" scheme="http://dev.wisedog.net/tags/%EC%99%B8%EC%A3%BC/"/>
+    
+      <category term="레거시" scheme="http://dev.wisedog.net/tags/%EB%A0%88%EA%B1%B0%EC%8B%9C/"/>
     
       <category term="node.js" scheme="http://dev.wisedog.net/tags/node-js/"/>
     
@@ -316,11 +316,11 @@
     </summary>
     
     
-      <category term="프로그래밍" scheme="http://dev.wisedog.net/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/"/>
-    
       <category term="개발자 구직시장" scheme="http://dev.wisedog.net/tags/%EA%B0%9C%EB%B0%9C%EC%9E%90-%EA%B5%AC%EC%A7%81%EC%8B%9C%EC%9E%A5/"/>
     
       <category term="개발자 구인시장" scheme="http://dev.wisedog.net/tags/%EA%B0%9C%EB%B0%9C%EC%9E%90-%EA%B5%AC%EC%9D%B8%EC%8B%9C%EC%9E%A5/"/>
+    
+      <category term="프로그래밍" scheme="http://dev.wisedog.net/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/"/>
     
   </entry>
   
@@ -644,9 +644,9 @@
       <category term="golang" scheme="http://dev.wisedog.net/categories/programming/golang/"/>
     
     
-      <category term="GCP" scheme="http://dev.wisedog.net/tags/GCP/"/>
-    
       <category term="삽질" scheme="http://dev.wisedog.net/tags/%EC%82%BD%EC%A7%88/"/>
+    
+      <category term="GCP" scheme="http://dev.wisedog.net/tags/GCP/"/>
     
       <category term="Google Cloud Platform" scheme="http://dev.wisedog.net/tags/Google-Cloud-Platform/"/>
     
