@@ -8,8 +8,8 @@
     </url>
 
     <url>
-        <loc>http://dev.wisedog.net/2020/04/18/%EC%99%B8%EC%A3%BC-%EB%A0%88%EA%B1%B0%EC%8B%9C%EB%A1%9C%EB%B6%80%ED%84%B0%EC%9D%98-%EC%97%AC%EC%A0%95-1%ED%8E%B8/</loc>
-        <lastmod>2020-04-19T08:40:11.935Z</lastmod>
+        <loc>http://dev.wisedog.net/2020/04/20/%EC%99%B8%EC%A3%BC-%EB%A0%88%EA%B1%B0%EC%8B%9C%EB%A1%9C%EB%B6%80%ED%84%B0%EC%9D%98-%EC%97%AC%EC%A0%95-3%ED%8E%B8/</loc>
+        <lastmod>2020-04-25T12:52:16.564Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +17,15 @@
 
     <url>
         <loc>http://dev.wisedog.net/2020/04/19/%EC%99%B8%EC%A3%BC-%EB%A0%88%EA%B1%B0%EC%8B%9C%EB%A1%9C%EB%B6%80%ED%84%B0%EC%9D%98-%EC%97%AC%EC%A0%95-2%ED%8E%B8/</loc>
-        <lastmod>2020-04-19T00:40:24.998Z</lastmod>
+        <lastmod>2020-04-25T12:42:13.791Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/2020/04/18/%EC%99%B8%EC%A3%BC-%EB%A0%88%EA%B1%B0%EC%8B%9C%EB%A1%9C%EB%B6%80%ED%84%B0%EC%9D%98-%EC%97%AC%EC%A0%95-1%ED%8E%B8/</loc>
+        <lastmod>2020-04-25T12:40:20.951Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -120,7 +128,7 @@
     </url>
 
     <url>
-        <loc>http://dev.wisedog.net/2018/04/04/how-to-use-jest-with-express-js/</loc>
+        <loc>http://dev.wisedog.net/2018/03/28/hello-world/</loc>
         <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -128,7 +136,7 @@
     </url>
 
     <url>
-        <loc>http://dev.wisedog.net/2018/03/28/hello-world/</loc>
+        <loc>http://dev.wisedog.net/2018/04/04/how-to-use-jest-with-express-js/</loc>
         <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

@@ -134,6 +134,96 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-02-04T05:12:29.000Z">2019-02-04</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/programming/">programming</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/programming/javascript/">javascript</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/programming/javascript/vue-js/">vue.js</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10분 read (About 1464 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/02/04/publish-vue-package/">Vue 패키지 개발하기</a>
+            
+        </h1>
+        <div class="content">
+            <p>&#xC791;&#xB144; &#xB9D0;&#xBD80;&#xD130; &#xD558;&#xACE0; &#xC2F6;&#xC5C8;&#xC9C0;&#xB9CC; &#xC2DC;&#xAC04;&#xC774; &#xC548;&#xB098;&#xC11C; &#xBABB;&#xD588;&#xB358; &#xC77C; - &#xBC14;&#xB85C; &#xACF5;&#xC2DD; npm &#xC800;&#xC7A5;&#xC18C;&#xC5D0; &#xB0B4; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xC62C;&#xB9B4; &#xC77C;&#xC774;&#xC5C8;&#xB2E4;. &#xC791;&#xB144; &#xD558;&#xBC18;&#xAE30;&#xC5D0;&#xB294; vue.js + Typescript &#xB85C; &#xC6F9; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xAC1C;&#xBC1C;&#xD558;&#xACE0; &#xC788;&#xC5C8;&#xB294;&#xB370;, &#xADF8; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC5D0;&#xC11C; &#xACAC;&#xC801;&#xC11C;&#xC758; &#xAE08;&#xC561;&#xC744; &#xD55C;&#xAE00;&#xB85C; &#xBC14;&#xAFB8;&#xB294; &#xBD80;&#xBD84;&#xC744; &#xAF2D; npm&#xC5D0; &#xC62C;&#xB9AC;&#xACE0; &#xC2F6;&#xC5C8;&#xB2E4;.</p>
+<p>&#xADF8;&#xB798;&#xC11C; &#xACB0;&#xAD6D; <a href="https://www.npmjs.com/package/vue-number-to-kor" target="_blank" rel="noopener">&#xB9CC;&#xB4E4;&#xC5B4; &#xC62C;&#xB838;&#xB2E4;</a>. &#xD55C; 3~4&#xC2DC;&#xAC04; &#xAC78;&#xB9B0;&#xB4EF;&#xD558;&#xB2E4;. &#xC774; &#xD328;&#xD0A4;&#xC9C0;&#xAC00; &#xD560; &#xC218; &#xC788;&#xB294; &#xC77C;&#xC740; &#xC22B;&#xC790;&#xB97C; &#xD55C;&#xAE00;&#xB85C; &#xBCC0;&#xD658;&#xD574;&#xC900;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; 100,1000&#xC6D0;&#xC740; &#x2018;&#xC77C;&#xBC31;&#xB9CC;&#xC77C;&#xCC9C;&#xC6D0;&#x2019; &#xC774;&#xB7F0;&#xC2DD;&#xC73C;&#xB85C; &#xACAC;&#xC801;&#xC11C;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xD55C;&#xAE00;&#xB85C; &#xBCC0;&#xD658;&#xD55C;&#xB2E4;.</p>
+<p>&#xC774; &#xAE00;&#xC740; &#xD574;&#xB2F9; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xB9CC;&#xB4E4;&#xACE0; &#xD37C;&#xBE14;&#xB9AC;&#xC2F1;&#xAE4C;&#xC9C0; &#xD55C; &#xC77C;&#xC744; &#xC815;&#xB9AC;&#xD574;&#xC11C; &#xC62C;&#xB838;&#xB2E4;. &#xD574;&#xB2F9; &#xD328;&#xD0A4;&#xC9C0;&#xB294; vue-cli&#xC640; &#xD0C0;&#xC785;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC368;&#xC11C; &#xB9CC;&#xB4E4;&#xC5C8;&#xB2E4;. &#xC6CC;&#xB099; &#xAC04;&#xB2E8;&#xD55C; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB77C; &#xD0C0;&#xC785;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294; &#xC548;&#xC368;&#xB3C4; &#xB41C;&#xB2E4;.</p>
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br><span class="line">vue create my-lib</span><br></pre></td></tr></tbody></table></figure>
+<p>@vue/cli&#xB294; create-react-app &#xACFC; &#xAC19;&#xC774; vue &#xC571;&#xC758; &#xC2A4;&#xCF08;&#xB808;&#xD1A4;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4;&#xC8FC;&#xB294; &#xD328;&#xD0A4;&#xC9C0;&#xB2E4;. &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB85C; &#xB4E4;&#xC5B4;&#xAC00;&#xC11C; &#xC571;&#xC744; &#xC2E4;&#xD589;&#xD574;&#xBCF8;&#xB2E4;.</p>
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd my-lib</span><br><span class="line">npm run serve</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xBDF0; &#xAE30;&#xBCF8; &#xC571;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.</p>
+<h2 id="&#xBAA8;&#xB4C8;-&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;-&#xD544;&#xD130;-&#xD328;&#xD0A4;&#xC9D5;&#xD654;"><a href="#&#xBAA8;&#xB4C8;-&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;-&#xD544;&#xD130;-&#xD328;&#xD0A4;&#xC9D5;&#xD654;" class="headerlink" title="&#xBAA8;&#xB4C8;(&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;, &#xD544;&#xD130;) &#xD328;&#xD0A4;&#xC9D5;&#xD654;"></a>&#xBAA8;&#xB4C8;(&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;, &#xD544;&#xD130;) &#xD328;&#xD0A4;&#xC9D5;&#xD654;</h2><p>/[project-root]/src &#xC5D0; filters &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;. &#xADF8; &#xD6C4; index.ts&#xC5D0; &#xC544;&#xB798;&#xC758; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD588;&#xB2E4;. </p>
+<figure class="highlight ts hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * &#xC22B;&#xC790;&#xB97C; &#xD55C;&#xAE00;&#xB85C; &#xBCC0;&#xD658;&#xD55C;&#xB2E4;.</span></span><br><span class="line"><span class="hljs-comment"> * @param value Filter &#xAC12;&#xC73C;&#xB85C; &#xB118;&#xC5B4;&#xC628; &#xC22B;&#xC790;</span></span><br><span class="line"><span class="hljs-comment"> * @param priceMode true&#xBA74; &#xBCC0;&#xD658;&#xB41C; &#xD55C;&#xAE00;&#xC5D0; &apos;&#xC77C;&apos;&#xC774; &#xBD99;&#xB294;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; &apos;&#xC77C;&#xC2ED;&#xC774;&#xB9CC;&#xC0BC;&#xCC9C;&#xC6D0;&apos;&#xACFC; &#xAC19;&#xC774; &#xC8FC;&#xB85C; &#xAE08;&#xC561;&#xC744; &#xD45C;&#xC2DC;&#xD560;&#xB54C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</span></span><br><span class="line"><span class="hljs-comment"> *                  false&#xB77C;&#xBA74; &apos;&#xC77C;&apos;&#xC774; &#xC0DD;&#xB7B5;&#xB41C;&#xB2E4;. &#xB2E4;&#xB9CC; &#xC5B5;&#xACFC; &#xAC19;&#xC774; &#xB2E8;&#xB3C5;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD588;&#xC744;&#xB54C; &#xC5B4;&#xC0C9;&#xD55C; &#xC22B;&#xC790;&#xB294; &#xC55E;&#xC5D0; &apos;&#xC77C;&apos;&#xC744; &#xBD99;&#xC778;&#xB2E4;.</span></span><br><span class="line"><span class="hljs-comment"> * @returns &#xD55C;&#xAE00;&#xB85C; &#xBCC0;&#xD658;&#xB41C; &#xC22B;&#xC790;&#xB97C; &#xB9AC;&#xD134;&#xD55C;&#xB2E4;. &#xB9CC;&#xC57D; &#xC22B;&#xC790;&#xAC00; &#xC544;&#xB2C8;&#xAC70;&#xB098;, &#xBC94;&#xC704;&#xB97C; &#xCD08;&#xACFC;&#xD558;&#xAC70;&#xB098; &#xAE30;&#xD0C0; &#xBB38;&#xC81C;&#xAC00; &#xBC1C;&#xC0DD;&#xD588;&#xC744; &#xACBD;&#xC6B0; &#xBE48; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xB9AC;&#xD134;&#xD55C;&#xB2E4;.</span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">numToKr</span>(<span class="hljs-params">value: <span class="hljs-built_in">number</span>, priceMode = <span class="hljs-literal">true</span></span>): <span class="hljs-title">string</span> </span>{</span><br><span class="line">    <span class="hljs-keyword">if</span> (value === <span class="hljs-number">0</span>) {</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#xC601;&apos;</span>;</span><br><span class="line">    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (value === <span class="hljs-number">1</span>) {</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&#xC77C;&apos;</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> han1 = [<span class="hljs-string">&apos;&apos;</span>, <span class="hljs-string">&apos;&#xC77C;&apos;</span>, <span class="hljs-string">&apos;&#xC774;&apos;</span>, <span class="hljs-string">&apos;&#xC0BC;&apos;</span>, <span class="hljs-string">&apos;&#xC0AC;&apos;</span>, <span class="hljs-string">&apos;&#xC624;&apos;</span>, <span class="hljs-string">&apos;&#xC721;&apos;</span>, <span class="hljs-string">&apos;&#xCE60;&apos;</span>, <span class="hljs-string">&apos;&#xD314;&apos;</span>, <span class="hljs-string">&apos;&#xAD6C;&apos;</span>];</span><br><span class="line">    <span class="hljs-keyword">const</span> han2 = [<span class="hljs-string">&apos;&apos;</span>, <span class="hljs-string">&apos;&#xB9CC;&apos;</span>, <span class="hljs-string">&apos;&#xC5B5;&apos;</span>, <span class="hljs-string">&apos;&#xC870;&apos;</span>, <span class="hljs-string">&apos;&#xACBD;&apos;</span>, <span class="hljs-string">&apos;&#xD574;&apos;</span>];</span><br><span class="line">    <span class="hljs-keyword">const</span> han3 = [<span class="hljs-string">&apos;&apos;</span>, <span class="hljs-string">&apos;&#xC2ED;&apos;</span>, <span class="hljs-string">&apos;&#xBC31;&apos;</span>, <span class="hljs-string">&apos;&#xCC9C;&apos;</span>];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (!priceMode) {</span><br><span class="line">        <span class="hljs-comment">// 1&#xB9CC; &#xB4E4;&#xC5B4;&#xC62C; &#xACBD;&#xC6B0; &#xBB38;&#xC81C;&#xAC00; &#xC0DD;&#xAE34;&#xB2E4;.</span></span><br><span class="line">        <span class="hljs-keyword">if</span> (value !== <span class="hljs-number">1</span>) {</span><br><span class="line">            han1[<span class="hljs-number">1</span>] = <span class="hljs-string">&apos;&apos;</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">const</span> numStr = value.toString();</span><br><span class="line">    <span class="hljs-keyword">const</span> size = numStr.length;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (size &gt; <span class="hljs-number">4</span> * han2.length) {</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="hljs-keyword">let</span> kor = <span class="hljs-string">&apos;&apos;</span>;</span><br><span class="line">    <span class="hljs-keyword">let</span> tmp: <span class="hljs-built_in">string</span>[] = [];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; numStr.length + <span class="hljs-number">1</span>; i++) {</span><br><span class="line">        <span class="hljs-keyword">const</span> v1 = <span class="hljs-built_in">Number</span>.parseInt(numStr.charAt(i - <span class="hljs-number">1</span>), <span class="hljs-number">10</span>);</span><br><span class="line">        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">isNaN</span>(v1)) {</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="hljs-keyword">if</span> (v1 !== <span class="hljs-number">0</span>) {</span><br><span class="line">            tmp.push(han1[v1]);</span><br><span class="line">            tmp.push(han3[(size - i) % <span class="hljs-number">4</span>]);</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">if</span> ((size - i) % <span class="hljs-number">4</span> === <span class="hljs-number">0</span> &amp;&amp; tmp.length !== <span class="hljs-number">0</span>) {</span><br><span class="line">            <span class="hljs-comment">// &#xC77C;&#xC5B5;&#xACFC; &#xAC19;&#xC774; &#xC77C;&#xC744; &#xC0DD;&#xB7B5;&#xD558;&#xBA74; &#xC5B4;&#xC0C9;&#xD55C; &#xC22B;&#xC790;&#xB294; &apos;&#xC77C;&apos;&#xC744; &#xBD99;&#xC5EC;&#xC900;&#xB2E4;.</span></span><br><span class="line">            kor += tmp.join(<span class="hljs-string">&apos;&apos;</span>);</span><br><span class="line">            <span class="hljs-keyword">if</span> (tmp.length === <span class="hljs-number">2</span> &amp;&amp; v1 === <span class="hljs-number">1</span> &amp;&amp; !priceMode) {</span><br><span class="line">                kor += <span class="hljs-string">&apos;&#xC77C;&apos;</span>;</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            tmp = [];</span><br><span class="line">            kor += han2[(size - i) / <span class="hljs-number">4</span>];</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="hljs-keyword">return</span> kor;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * &#xC22B;&#xC790;&#xB85C; &#xB41C; &#xAE08;&#xC561;&#xC744; &#xD55C;&#xAE00;&#xB85C; &#xBCC0;&#xD658;&#xD55C;&#xB2E4;.</span></span><br><span class="line"><span class="hljs-comment"> * &#xC608;) 994950 -&gt; &#xAD6C;&#xC2ED;&#xAD6C;&#xB9CC;&#xC0AC;&#xCC9C;&#xAD6C;&#xBC31;&#xC624;&#xC2ED;&#xC6D0;</span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">install</span>(<span class="hljs-params"></span>) </span>{</span><br><span class="line">    Vue.filter(<span class="hljs-string">&apos;numberToKor&apos;</span>, numToKr);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> install;</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xD574;&#xB2F9; &#xBAA8;&#xB4C8;&#xC740; &#xB2E8;&#xC21C;&#xD558;&#xAC8C; main.ts &#xD639;&#xC740; main.js&#xC5D0;&#xC11C; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<figure class="highlight js hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> NumberToKorFilter <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue-number-to-kor&apos;</span>;</span><br><span class="line"> </span><br><span class="line">Vue.use(NumberToKorFilter);</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="1-&#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;-&#xBE4C;&#xB4DC;-&#xC14B;&#xC5C5;"><a href="#1-&#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;-&#xBE4C;&#xB4DC;-&#xC14B;&#xC5C5;" class="headerlink" title="1. &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xBE4C;&#xB4DC; &#xC14B;&#xC5C5;"></a>1. &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xBE4C;&#xB4DC; &#xC14B;&#xC5C5;</h3><p>&#xBA3C;&#xC800; &#xD574;&#xB2F9; &#xBAA8;&#xB4C8;&#xC744; &#xD0C0;&#xAC9F;&#xC73C;&#xB85C; &#xC7A1;&#xACE0; &#xBE4C;&#xB4DC;&#xD55C;&#xB2E4;. vue-cli&#xB97C; &#xC124;&#xCE58;&#xD558;&#xBA74; &#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; vue-cli-service &#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xB370;, &#xC774; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xD574;&#xB2F9; &#xBAA8;&#xB4C8;&#xC744; &#xBE4C;&#xB4DC;&#xD55C;&#xB2E4;. &#xAE30;&#xC874; package.json&#xC740; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xD615;&#xD0DC;&#xC77C; &#xAC83;&#xC774;&#xB2E4;.</p>
+<figure class="highlight hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: {</span><br><span class="line">    &quot;serve&quot;: &quot;vue-cli-service serve&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;vue-cli-service build&quot;,</span><br><span class="line">    &quot;lint&quot;: &quot;vue-cli-service lint&quot;,</span><br><span class="line">    &quot;test&quot;: &quot;vue-cli-service test:unit&quot;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xC5EC;&#xAE30;&#xC5D0; &#xBC88;&#xB4E4;&#xB9C1;&#xD560; &#xBA85;&#xB839;&#xC5B4; - build:bundle&#xC744; &#xCD94;&#xAC00;&#xD55C;&#xB2E4;.<br></p><figure class="highlight hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: {</span><br><span class="line">    &quot;serve&quot;: &quot;vue-cli-service serve&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;vue-cli-service build&quot;,</span><br><span class="line">    &quot;build:bundle&quot;: &quot;vue-cli-service build --target lib --name vue-number-to-kor ./src/filters/index.ts&quot;,</span><br><span class="line">    &quot;lint&quot;: &quot;vue-cli-service lint&quot;,</span><br><span class="line">    &quot;test&quot;: &quot;vue-cli-service test:unit&quot;</span><br><span class="line">  },</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="2-npm-run-build-bundle"><a href="#2-npm-run-build-bundle" class="headerlink" title="2. npm run build:bundle"></a>2. npm run build:bundle</h3><p>&#xC704; &#xBA85;&#xB801;&#xC5B4; &#xC2E4;&#xD589;&#xC744; &#xB9C8;&#xCE58;&#xBA74; dist &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; umd&#xC640; commonjs &#xC6A9; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xAC00; &#xBC88;&#xB4E4;&#xB9C1;&#xB418;&#xC5B4; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;.</p>
+<h3 id="3-package-json&#xC5D0;-name&#xC124;&#xC815;-&#xBC0F;-main&#xACFC;-files-&#xCD94;&#xAC00;"><a href="#3-package-json&#xC5D0;-name&#xC124;&#xC815;-&#xBC0F;-main&#xACFC;-files-&#xCD94;&#xAC00;" class="headerlink" title="3. package.json&#xC5D0; name&#xC124;&#xC815; &#xBC0F; main&#xACFC; files &#xCD94;&#xAC00;"></a>3. package.json&#xC5D0; name&#xC124;&#xC815; &#xBC0F; main&#xACFC; files &#xCD94;&#xAC00;</h3><p>&#xC774; &#xBD80;&#xBD84;&#xC774; &#xC911;&#xC694;&#xD55C;&#xB370;, &#xBC18;&#xB4DC;&#xC2DC; package.json&#xC5D0; main &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB97C; &#xCD94;&#xAC00;&#xD574;&#xC57C; &#xD55C;&#xB2E4;. umd&#xC640; commonjs &#xC911; &#xD558;&#xB098;&#xB97C; &#xC120;&#xD0DD;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<figure class="highlight json hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    <span class="hljs-attr">&quot;main&quot;</span>: <span class="hljs-string">&quot;./dist/vue-number-to-kor.common.js&quot;</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xADF8;&#xB9AC;&#xACE0; &#xC5B4;&#xB5A4; &#xD30C;&#xC77C;&#xC744; &#xD328;&#xD0A4;&#xC9C0;&#xC5D0; &#xB123;&#xC744; &#xAC83;&#xC778;&#xC9C0; npm&#xC5D0; &#xC54C;&#xB824;&#xC918;&#xC57C; &#xD55C;&#xB2E4;. &#xC774;&#xB97C; package.json&#xC5D0; &#xCD94;&#xAC00;&#xD55C;&#xB2E4;.</p>
+<figure class="highlight json hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    <span class="hljs-attr">&quot;files&quot;</span>: [</span><br><span class="line">        <span class="hljs-string">&quot;dist/*&quot;</span>,</span><br><span class="line">        <span class="hljs-string">&quot;src/*&quot;</span>,</span><br><span class="line">        <span class="hljs-string">&quot;public/*&quot;</span>,</span><br><span class="line">        <span class="hljs-string">&quot;*.json&quot;</span>,</span><br><span class="line">        <span class="hljs-string">&quot;*.js&quot;</span></span><br><span class="line">    ],</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>package.json&#xC5D0; name &#xC18D;&#xC131;&#xC774; &#xC788;&#xB2E4;. &#xC774;&#xAC8C; npm &#xACF5;&#xC2DD; &#xC800;&#xC7A5;&#xC18C;&#xC758; &#xD328;&#xD0A4;&#xC9C0; &#xC774;&#xB984;&#xC774; &#xB418;&#xB2C8;&#xAE4C; &#xC2E0;&#xC911;&#xD558;&#xAC8C; &#xACB0;&#xC815;&#xD558;&#xB3C4;&#xB85D; &#xD55C;&#xB2E4;. &#xBB3C;&#xB860; &#xACB9;&#xCE58;&#xC9C0; &#xC54A;&#xB294; &#xAC78;&#xB85C; &#xD55C;&#xB2E4;.</p>
+<figure class="highlight json hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#xD328;&#xD0A4;&#xC9C0; &#xC774;&#xB984;&quot;</span>,</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="4-npm-&#xB85C;&#xADF8;&#xC778;"><a href="#4-npm-&#xB85C;&#xADF8;&#xC778;" class="headerlink" title="4. npm &#xB85C;&#xADF8;&#xC778;"></a>4. npm &#xB85C;&#xADF8;&#xC778;</h3><p>npm &#xACF5;&#xC2DD; &#xC800;&#xC7A5;&#xC18C;&#xC5D0; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xD37C;&#xBE14;&#xB9AC;&#xC2F1; &#xD558;&#xB824;&#xBA74; &#xBB3C;&#xB860; npm&#xC5D0; &#xD68C;&#xC6D0; &#xAC00;&#xC785;&#xC774; &#xB418;&#xC5B4; &#xC788;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;. &#xACC4;&#xC815;&#xC774; &#xC5C6;&#xC73C;&#xBA74; &#xBA3C;&#xC800; &#xD68C;&#xC6D0;&#xAC00;&#xC785;&#xC744; &#xD558;&#xC790;. &#xADF8;&#xB9AC;&#xACE0; <code>npm login</code> &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xD1B5;&#xD574;&#xC11C; &#xD574;&#xB2F9; &#xACC4;&#xC815;&#xC73C;&#xB85C; &#xB85C;&#xADF8;&#xC778;&#xD55C;&#xB2E4;. &#xB85C;&#xADF8;&#xC778; &#xC0C1;&#xD0DC; &#xD655;&#xC778;&#xC740; <code>npm whoami</code>&#xB97C; &#xD1B5;&#xD574;&#xC11C; &#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<h3 id="5-&#xBE4C;&#xB4DC;-&#xBC0F;-&#xD37C;&#xBE14;&#xB9AC;&#xC2F1;"><a href="#5-&#xBE4C;&#xB4DC;-&#xBC0F;-&#xD37C;&#xBE14;&#xB9AC;&#xC2F1;" class="headerlink" title="5. &#xBE4C;&#xB4DC; &#xBC0F; &#xD37C;&#xBE14;&#xB9AC;&#xC2F1;"></a>5. &#xBE4C;&#xB4DC; &#xBC0F; &#xD37C;&#xBE14;&#xB9AC;&#xC2F1;</h3><p>&#xD37C;&#xBE14;&#xB9AC;&#xC2F1; &#xC804; &#xC911;&#xAC04;&#xC5D0; &#xCF54;&#xB4DC;&#xB97C; &#xBC14;&#xAFB8;&#xC9C0; &#xC54A;&#xC558;&#xC73C;&#xBA74; &#xB2E4;&#xC2DC; &#xBE4C;&#xB4DC; &#xD558;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xB418;&#xC9C0;&#xB9CC;, &#xC5BC;&#xB9C8; &#xAC78;&#xB9AC;&#xC9C0; &#xC54A;&#xC73C;&#xB2C8;&#xAE4C; &#xADF8;&#xB0E5; &#xD655;&#xC2E4;&#xD558;&#xAC8C; &#xBE4C;&#xB4DC; &#xB2E4;&#xC2DC; &#xD558;&#xC790;.<br></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build:bundle</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>&#xADF8; &#xB2E4;&#xC74C; npm &#xACF5;&#xC2DD; &#xC800;&#xC7A5;&#xC18C;&#xC5D0; &#xD37C;&#xBE14;&#xB9AC;&#xC2F1;&#xC744; &#xD55C;&#xB2E4;.</p>
+<figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish --access public</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xB2E4;&#xC74C; <a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm&#xACF5;&#xC2DD; &#xC800;&#xC7A5;&#xC18C;</a>&#xC5D0;&#xC11C; &#xD574;&#xB2F9; &#xD328;&#xD0A4;&#xC9C0;&#xAC00; &#xC798; &#xD37C;&#xBE14;&#xB9AC;&#xC2F1; &#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD55C;&#xB2E4;. &#xC774;&#xAC78;&#xB85C; &#xB05D;&#xC774;&#xB2E4;.</p>
+<h3 id="&#xAE30;&#xD0C0;"><a href="#&#xAE30;&#xD0C0;" class="headerlink" title="&#xAE30;&#xD0C0;"></a>&#xAE30;&#xD0C0;</h3><p>package.json&#xC5D0;&#xB294; &#xC0C1;&#xB2F9;&#xD788; &#xB9CE;&#xC740; &#xC815;&#xBCF4;&#xB97C; &#xB2F4;&#xC544;&#xC57C; &#xD55C;&#xB2E4;. &#xAE30;&#xC655; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xBC30;&#xD3EC;&#xD558;&#xB294;&#xAC70; &#xB2E4;&#xB978; &#xAC1C;&#xBC1C;&#xC790;&#xAC00; &#xB9CE;&#xC774; &#xC4F0;&#xBA74; &#xAE30;&#xBD84;&#xC774; &#xC88B;&#xC9C0; &#xC54A;&#xC740;&#xAC00;.</p>
+<p>&#xBC18;&#xB4DC;&#xC2DC; &#xAE30;&#xC785;&#xD558;&#xAE30;&#xB97C; &#xAD8C;&#xC7A5;&#xD558;&#xB294; &#xC815;&#xBCF4;&#xB294; <code>version, license, homepage</code> &#xC774;&#xBA70;, &#xB123;&#xC73C;&#xBA74; &#xC88B;&#xC740; &#xC815;&#xBCF4;&#xB294; <code>author, keywords, bugs</code>&#xAC00; &#xC788;&#xB2E4;.</p>
+<p>&#xC544;&#xB798;&#xB294; &#xC608;&#xC2DC; package.json&#xC774;&#xB2E4;.<br></p><figure class="highlight json hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.1.1&quot;</span>,</span><br><span class="line">    <span class="hljs-attr">&quot;license&quot;</span>: <span class="hljs-string">&quot;MIT&quot;</span>,</span><br><span class="line">    <span class="hljs-attr">&quot;keywords&quot;</span>: [</span><br><span class="line">        <span class="hljs-string">&quot;vue&quot;</span>,</span><br><span class="line">        <span class="hljs-string">&quot;vuejs&quot;</span>,</span><br><span class="line">        <span class="hljs-string">&quot;vue-number-to-kor&quot;</span>,</span><br><span class="line">        <span class="hljs-string">&quot;&#xD55C;&#xAE00;&quot;</span>,</span><br><span class="line">        <span class="hljs-string">&quot;&#xC22B;&#xC790; &#xBCC0;&#xD658;&quot;</span>,</span><br><span class="line">        <span class="hljs-string">&quot;filter&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="hljs-attr">&quot;author&quot;</span>: {</span><br><span class="line">        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Jongha Kim&quot;</span>,</span><br><span class="line">        <span class="hljs-attr">&quot;email&quot;</span>: <span class="hljs-string">&quot;kim.jongha@gmail.com&quot;</span></span><br><span class="line">    },</span><br><span class="line">    <span class="hljs-attr">&quot;bugs&quot;</span>: {</span><br><span class="line">        <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://github.com/wisedog/vue-number-to-kor/issues&quot;</span></span><br><span class="line">    },</span><br><span class="line">    <span class="hljs-attr">&quot;homepage&quot;</span>: <span class="hljs-string">&quot;https://github.com/wisedog/vue-number-to-kor&quot;</span>,</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-12-29T11:43:56.000Z">2018-12-29</time>
                 
                 <div class="level-item">
@@ -742,7 +832,7 @@
                         포스트
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        18
                     </p>
                 </div>
             </div>
@@ -762,7 +852,7 @@
                         태그
                     </p>
                     <p class="title has-text-weight-normal">
-                        53
+                        55
                     </p>
                 </div>
             </div>
@@ -886,7 +976,7 @@
                 <span class="level-item">개발일기</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/개발일기/일반/">
@@ -894,7 +984,7 @@
                 <span class="level-item">일반</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -911,16 +1001,35 @@
         
         <article class="media">
             
+            <a href="/2020/04/20/외주-레거시로부터의-여정-3편/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="외주 레거시로부터의 여정 3편 - API 개편">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-20T06:20:23.000Z">2020-04-20</time></div>
+                    <a href="/2020/04/20/외주-레거시로부터의-여정-3편/" class="has-link-black-ter is-size-6">외주 레거시로부터의 여정 3편 - API 개편</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/개발일기/">개발일기</a> / <a class="has-link-grey -link" href="/categories/개발일기/일반/">일반</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/04/19/외주-레거시로부터의-여정-2편/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="외주 레거시로부터의 여정 2편">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="외주 레거시로부터의 여정 2편 - 개발팀 구성">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-19T02:58:13.000Z">2020-04-19</time></div>
-                    <a href="/2020/04/19/외주-레거시로부터의-여정-2편/" class="has-link-black-ter is-size-6">외주 레거시로부터의 여정 2편</a>
+                    <a href="/2020/04/19/외주-레거시로부터의-여정-2편/" class="has-link-black-ter is-size-6">외주 레거시로부터의 여정 2편 - 개발팀 구성</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/개발일기/">개발일기</a> / <a class="has-link-grey -link" href="/categories/개발일기/일반/">일반</a>
                     </p>
@@ -932,14 +1041,14 @@
             
             <a href="/2020/04/18/외주-레거시로부터의-여정-1편/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="외주 레거시로부터의 여정 1편">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="외주 레거시로부터의 여정 1편 - 기존 레가시 파악">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-18T01:59:27.000Z">2020-04-18</time></div>
-                    <a href="/2020/04/18/외주-레거시로부터의-여정-1편/" class="has-link-black-ter is-size-6">외주 레거시로부터의 여정 1편</a>
+                    <a href="/2020/04/18/외주-레거시로부터의-여정-1편/" class="has-link-black-ter is-size-6">외주 레거시로부터의 여정 1편 - 기존 레가시 파악</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/개발일기/">개발일기</a> / <a class="has-link-grey -link" href="/categories/개발일기/일반/">일반</a>
                     </p>
@@ -985,25 +1094,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/27/에이팀벤쳐스-개발팀에-대한-오해/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="에이팀벤쳐스 (개발팀)에 대한 오해">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-27T02:31:53.000Z">2020-02-27</time></div>
-                    <a href="/2020/02/27/에이팀벤쳐스-개발팀에-대한-오해/" class="has-link-black-ter is-size-6">에이팀벤쳐스 (개발팀)에 대한 오해</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1014,7 +1104,7 @@
         <h3 class="menu-label">
             태그 클라우드
         </h3>
-        <a href="/tags/AWS/" style="font-size: 13.33px;">AWS</a> <a href="/tags/App-Engine/" style="font-size: 16.67px;">App Engine</a> <a href="/tags/ECMAScript/" style="font-size: 20px;">ECMAScript</a> <a href="/tags/EKS/" style="font-size: 13.33px;">EKS</a> <a href="/tags/Elastic-Kubernetes-Service/" style="font-size: 10px;">Elastic Kubernetes Service</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Firebase/" style="font-size: 10px;">Firebase</a> <a href="/tags/Firestore/" style="font-size: 10px;">Firestore</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 10px;">Google Cloud Platform</a> <a href="/tags/Hoisting/" style="font-size: 10px;">Hoisting</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Kubernetes/" style="font-size: 13.33px;">Kubernetes</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/RDS/" style="font-size: 10px;">RDS</a> <a href="/tags/Typescript/" style="font-size: 10px;">Typescript</a> <a href="/tags/Unit-test/" style="font-size: 10px;">Unit test</a> <a href="/tags/appengine/" style="font-size: 10px;">appengine</a> <a href="/tags/datastore/" style="font-size: 10px;">datastore</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/google-cloud-platform/" style="font-size: 16.67px;">google cloud platform</a> <a href="/tags/jest/" style="font-size: 10px;">jest</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/npm-패키지/" style="font-size: 10px;">npm 패키지</a> <a href="/tags/npm-퍼블리싱/" style="font-size: 10px;">npm 퍼블리싱</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-js/" style="font-size: 10px;">vue.js</a> <a href="/tags/개발자-구인시장/" style="font-size: 10px;">개발자 구인시장</a> <a href="/tags/개발자-구직시장/" style="font-size: 10px;">개발자 구직시장</a> <a href="/tags/구글-앱-엔진/" style="font-size: 16.67px;">구글 앱 엔진</a> <a href="/tags/구글-클라우드-플랫폼/" style="font-size: 16.67px;">구글 클라우드 플랫폼</a> <a href="/tags/레거시/" style="font-size: 13.33px;">레거시</a> <a href="/tags/삽질/" style="font-size: 16.67px;">삽질</a> <a href="/tags/앱엔진/" style="font-size: 16.67px;">앱엔진</a> <a href="/tags/엄격-모드/" style="font-size: 10px;">엄격 모드</a> <a href="/tags/에이팀벤쳐스/" style="font-size: 10px;">에이팀벤쳐스</a> <a href="/tags/에이팀벤쳐스-근무환경/" style="font-size: 10px;">에이팀벤쳐스 근무환경</a> <a href="/tags/에이팀벤쳐스-잡플래닛/" style="font-size: 10px;">에이팀벤쳐스 잡플래닛</a> <a href="/tags/외주/" style="font-size: 13.33px;">외주</a> <a href="/tags/유닛-테스트/" style="font-size: 10px;">유닛 테스트</a> <a href="/tags/자바스트립트/" style="font-size: 20px;">자바스트립트</a> <a href="/tags/채용/" style="font-size: 10px;">채용</a> <a href="/tags/코딩테스트/" style="font-size: 10px;">코딩테스트</a> <a href="/tags/쿠버네티스/" style="font-size: 10px;">쿠버네티스</a> <a href="/tags/타입스크립트/" style="font-size: 10px;">타입스크립트</a> <a href="/tags/파이어베이스/" style="font-size: 10px;">파이어베이스</a> <a href="/tags/파이어스토어/" style="font-size: 10px;">파이어스토어</a> <a href="/tags/프로그래밍/" style="font-size: 16.67px;">프로그래밍</a> <a href="/tags/호이스팅/" style="font-size: 10px;">호이스팅</a>
+        <a href="/tags/AWS/" style="font-size: 13.33px;">AWS</a> <a href="/tags/App-Engine/" style="font-size: 16.67px;">App Engine</a> <a href="/tags/ECMAScript/" style="font-size: 20px;">ECMAScript</a> <a href="/tags/EKS/" style="font-size: 13.33px;">EKS</a> <a href="/tags/Elastic-Kubernetes-Service/" style="font-size: 10px;">Elastic Kubernetes Service</a> <a href="/tags/Express/" style="font-size: 13.33px;">Express</a> <a href="/tags/Firebase/" style="font-size: 10px;">Firebase</a> <a href="/tags/Firestore/" style="font-size: 10px;">Firestore</a> <a href="/tags/GCP/" style="font-size: 20px;">GCP</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Google-Cloud-Platform/" style="font-size: 10px;">Google Cloud Platform</a> <a href="/tags/Hoisting/" style="font-size: 10px;">Hoisting</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Kubernetes/" style="font-size: 13.33px;">Kubernetes</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/RDS/" style="font-size: 10px;">RDS</a> <a href="/tags/Typescript/" style="font-size: 13.33px;">Typescript</a> <a href="/tags/Unit-test/" style="font-size: 10px;">Unit test</a> <a href="/tags/appengine/" style="font-size: 10px;">appengine</a> <a href="/tags/datastore/" style="font-size: 10px;">datastore</a> <a href="/tags/go/" style="font-size: 10px;">go</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/google-cloud-platform/" style="font-size: 16.67px;">google cloud platform</a> <a href="/tags/jest/" style="font-size: 10px;">jest</a> <a href="/tags/k8s/" style="font-size: 10px;">k8s</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/npm-패키지/" style="font-size: 10px;">npm 패키지</a> <a href="/tags/npm-퍼블리싱/" style="font-size: 10px;">npm 퍼블리싱</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue-js/" style="font-size: 10px;">vue.js</a> <a href="/tags/개발자-구인시장/" style="font-size: 10px;">개발자 구인시장</a> <a href="/tags/개발자-구직시장/" style="font-size: 10px;">개발자 구직시장</a> <a href="/tags/구글-앱-엔진/" style="font-size: 16.67px;">구글 앱 엔진</a> <a href="/tags/구글-클라우드-플랫폼/" style="font-size: 16.67px;">구글 클라우드 플랫폼</a> <a href="/tags/노드/" style="font-size: 10px;">노드</a> <a href="/tags/레거시/" style="font-size: 16.67px;">레거시</a> <a href="/tags/삽질/" style="font-size: 16.67px;">삽질</a> <a href="/tags/앱엔진/" style="font-size: 16.67px;">앱엔진</a> <a href="/tags/엄격-모드/" style="font-size: 10px;">엄격 모드</a> <a href="/tags/에이팀벤쳐스/" style="font-size: 10px;">에이팀벤쳐스</a> <a href="/tags/에이팀벤쳐스-근무환경/" style="font-size: 10px;">에이팀벤쳐스 근무환경</a> <a href="/tags/에이팀벤쳐스-잡플래닛/" style="font-size: 10px;">에이팀벤쳐스 잡플래닛</a> <a href="/tags/외주/" style="font-size: 16.67px;">외주</a> <a href="/tags/유닛-테스트/" style="font-size: 10px;">유닛 테스트</a> <a href="/tags/자바스트립트/" style="font-size: 20px;">자바스트립트</a> <a href="/tags/채용/" style="font-size: 10px;">채용</a> <a href="/tags/코딩테스트/" style="font-size: 10px;">코딩테스트</a> <a href="/tags/쿠버네티스/" style="font-size: 10px;">쿠버네티스</a> <a href="/tags/타입스크립트/" style="font-size: 13.33px;">타입스크립트</a> <a href="/tags/파이어베이스/" style="font-size: 10px;">파이어베이스</a> <a href="/tags/파이어스토어/" style="font-size: 10px;">파이어스토어</a> <a href="/tags/프로그래밍/" style="font-size: 20px;">프로그래밍</a> <a href="/tags/호이스팅/" style="font-size: 10px;">호이스팅</a>
     </div>
 </div>
 
@@ -1033,7 +1123,7 @@
                     <span class="level-item">4월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1280,7 +1370,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
