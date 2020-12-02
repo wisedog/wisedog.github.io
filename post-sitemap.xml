@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>http://dev.wisedog.net/2020/12/02/%EC%99%B8%EC%A3%BC-%EB%A0%88%EA%B1%B0%EC%8B%9C%EB%A1%9C%EB%B6%80%ED%84%B0%EC%9D%98-%EC%97%AC%EC%A0%95-4%ED%8E%B8/</loc>
+        <lastmod>2020-12-02T13:50:21.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dev.wisedog.net/2019/06/18/%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3-%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%86%E1%85%A7%E1%86%AB-%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%80%E1%85%B5/</loc>
+        <lastmod>2020-12-02T13:49:43.563Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dev.wisedog.net/2020/04/25/%EC%99%B8%EC%A3%BC-%EB%A0%88%EA%B1%B0%EC%8B%9C%EB%A1%9C%EB%B6%80%ED%84%B0%EC%9D%98-%EC%97%AC%EC%A0%95-3%ED%8E%B8/</loc>
         <lastmod>2020-04-25T22:34:02.340Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -64,14 +80,6 @@
     </url>
 
     <url>
-        <loc>http://dev.wisedog.net/2019/06/18/%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3-%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%86%E1%85%A7%E1%86%AB-%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%80%E1%85%B5/</loc>
-        <lastmod>2019-06-18T14:25:31.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://dev.wisedog.net/2019/05/13/korean-developer-job-distribution/</loc>
         <lastmod>2019-05-13T13:34:05.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -112,6 +120,14 @@
     </url>
 
     <url>
+        <loc>http://dev.wisedog.net/2018/05/24/ECMAScript-use-strict-%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5/</loc>
+        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dev.wisedog.net/2018/05/19/About-ECMAScript-Hoisting/</loc>
         <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -120,7 +136,7 @@
     </url>
 
     <url>
-        <loc>http://dev.wisedog.net/2018/05/24/ECMAScript-use-strict-%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5/</loc>
+        <loc>http://dev.wisedog.net/2018/03/28/hello-world/</loc>
         <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -137,14 +153,6 @@
 
     <url>
         <loc>http://dev.wisedog.net/2018/04/22/introduce-google-cloud-app-engine-1/</loc>
-        <lastmod>2019-02-01T14:09:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://dev.wisedog.net/2018/03/28/hello-world/</loc>
         <lastmod>2019-02-01T14:09:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
